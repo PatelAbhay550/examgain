@@ -218,7 +218,13 @@ export const suggestions = [
     slug: "what-were-the-economic-consequences-of-the-partition-of-india",
     tags: ["history", "india", "pro"],
   },
+  {
+    question: "What is the Total Surface Area of a Cylinder?",
+    answer:
+      "Total Surface Area of Cylinder = 2πr ( r + h ). Where r is the radius and h is the height of the cylinder (the distance between the two bases).",
+    slug: "what-is-the-tsa-of-cylinder",
+    tags: ["maths","mensuration"],
+  },
 
-  // Additional 70 questions with varying difficulty levels
-  // ...
+ 
 ];
