@@ -5,7 +5,7 @@ import { suggestions } from "@/data/suggestions";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-blue-100 to-white py-12 pt-32 px-4 border-b-4 border-blue-700">
+    <section className="bg-gradient-to-b from-blue-100 to-white py-12 pt-32 px-4 ">
       <div className="container mx-auto text-center">
         {/* Hero Heading */}
         <h1 className="text-3xl font-bold mb-8">
