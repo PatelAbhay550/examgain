@@ -26,7 +26,7 @@ export default function sitemap() {
     url: `https://examgain.vercel.app/questions/${item.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
-    priority: 0.9,
+    priority: 1,
   }));
 
   return [...staticUrls, ...questionUrls];
