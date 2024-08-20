@@ -229,7 +229,21 @@ export const suggestions = [
   "question": "How many times was a national emergency declared in India?",
   "answer": "A national emergency has been declared in India three times: first in 1962 during the India-China war, second in 1971 during the Indo-Pakistani war, and third in 1975 when Prime Minister Indira Gandhi declared an emergency due to internal disturbances. Each of these emergencies had significant political and social impacts on the country.",
   "slug": "how-many-times-national-emergency-declared-in-india",
-  "tags": ["politics", "india", "history"]
+  "tags": ["politics", "india", "history","ssc"]
 },
+  {
+  "question": "Who was the founder of the Gupta dynasty?",
+  "answer": "The founder of the Gupta dynasty was Sri Gupta. He established the dynasty around the early 4th century CE, marking the beginning of what is often referred to as the 'Golden Age' of India. Although little is known about his reign, his successors, particularly Chandragupta I, greatly expanded the empire and established it as a dominant force in ancient India. The Gupta Empire is renowned for its advancements in science, mathematics, astronomy, religion, and philosophy.",
+  "slug": "who-was-the-founder-of-gupta-dynasty",
+  "tags": ["history", "india", "ssc","history"]
+},
+  {
+  "question": "In which year did Sikkim join the Indian Republic?",
+  "answer": "Sikkim officially became a part of the Indian Republic in 1975. After a series of political developments and a referendum where the majority of Sikkimese people voted in favor of joining India, the Indian Parliament passed the 36th Amendment to the Constitution, making Sikkim the 22nd state of India on May 16, 1975.",
+  "slug": "in-which-year-did-sikkim-join-indian-republic",
+  "tags": ["history", "india", "geography", "ssc"]
+}
+
+
  
 ];
