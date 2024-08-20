@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo on the left */}
         <div className="text-2xl font-bold">
-          <a href="/">Guideblog</a>
+          <a href="/">Examgain</a>
         </div>
 
         {/* Hamburger icon for mobile */}
