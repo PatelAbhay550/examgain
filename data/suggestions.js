@@ -225,6 +225,11 @@ export const suggestions = [
     slug: "what-is-the-tsa-of-cylinder",
     tags: ["maths","mensuration"],
   },
-
+  {
+  "question": "How many times was a national emergency declared in India?",
+  "answer": "A national emergency has been declared in India three times: first in 1962 during the India-China war, second in 1971 during the Indo-Pakistani war, and third in 1975 when Prime Minister Indira Gandhi declared an emergency due to internal disturbances. Each of these emergencies had significant political and social impacts on the country.",
+  "slug": "how-many-times-national-emergency-declared-in-india",
+  "tags": ["politics", "india", "history"]
+},
  
 ];
