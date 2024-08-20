@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
 
       {/* Verified Section */}
       <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-3">
-        <p className="text-sm text-gray-500">Verified by Guideblog</p>
+        <p className="text-sm text-gray-500">Verified by Examgain</p>
         <p className="mt-2 text-base">This privacy policy is verified!</p>
       </div>
 
@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
           August 20, 2024
         </p>
         <p className="mt-4">
-          Welcome to Guideblog. We are committed to protecting your privacy. This
+          Welcome to Examgain. We are committed to protecting your privacy. This
           Privacy Policy outlines how we collect, use, disclose, and protect
           your information when you use our services.
         </p>
