@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 Disallow: /private/
-Sitemap: https://examgain.vercel.com/sitemap.xml
+Sitemap: https://www.guideblog.me/sitemap.xml
