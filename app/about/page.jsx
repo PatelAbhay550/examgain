@@ -9,11 +9,11 @@ const AboutUs = () => {
 
       <div className="bg-gray-100 p-6 rounded-lg shadow-md mb-8">
         <p className="text-lg text-gray-700">
-          Welcome to <strong>Examgain</strong> – your ultimate companion in exam
+          Welcome to <strong>Guideblog</strong> – your ultimate companion in exam
           preparation! We are a dedicated online platform that aims to make
           learning and exam readiness seamless and efficient for students of all
           levels. Whether you're preparing for school exams, competitive exams,
-          or entrance tests, Examgain has got you covered.
+          or entrance tests, Guideblog has got you covered.
         </p>
       </div>
 
@@ -22,7 +22,7 @@ const AboutUs = () => {
           Our Mission
         </h2>
         <p>
-          At Examgain, our mission is to empower every student to achieve their
+          At Guideblog, our mission is to empower every student to achieve their
           educational goals by providing quality resources, personalized
           learning experiences, and the motivation to excel in their exams.
         </p>
@@ -30,7 +30,7 @@ const AboutUs = () => {
 
       <div className="bg-white shadow-md rounded-lg p-4">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">
-          Why Choose Examgain?
+          Why Choose Guideblog?
         </h2>
         <ul className="list-disc list-inside space-y-2">
           <li>
