@@ -1,5 +1,8 @@
 import React from "react";
-
+export const metadata = {
+  title: "Privacy Policy | Examgain",
+  description: "Welcome to Examgain. We are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you use our services.",
+};
 const PrivacyPolicy = () => {
   return (
     <div className="container mx-auto py-8 pt-28 px-4">
