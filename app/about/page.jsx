@@ -1,5 +1,8 @@
 import React from "react";
-
+export const metadata = {
+  title: "About Examgain",
+  description: "We are a dedicated online platform that aims to make learning and exam readiness seamless and efficient for students of all levels.",
+};
 const AboutUs = () => {
   return (
     <div className="container mx-auto py-8 pt-28 px-4">
