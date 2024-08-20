@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left mb-8">
           {/* About Section */}
           <div>
-            <h4 className="text-lg font-bold mb-4">About Examgain</h4>
+            <h4 className="text-lg font-bold mb-4">About Guideblog</h4>
             <p className="text-gray-600">
-              Examgain is your go-to platform for finding verified answers to
+              Guideblog is your go-to platform for finding verified answers to
               all your exam questions. Whether it's math, science, or history,
               we've got expert solutions to help you succeed.
             </p>
@@ -74,13 +74,13 @@ const Footer = () => {
         {/* Bottom section - SEO-friendly keywords */}
         <div className="border-t border-gray-300 pt-8 text-center text-gray-500 text-sm">
           <p>
-            &copy; {new Date().getFullYear()} Examgain. All rights reserved. |
+            &copy; {new Date().getFullYear()} Guideblog. All rights reserved. |
             Your #1 source for verified exam answers and study solutions for all
             subjects, chapters, and questions.
           </p>
           <p className="mt-4">
             Find expert solutions for Math, Science, History, English, and more.
-            Examgain helps students prepare for exams, solve tricky questions,
+            Guideblog helps students prepare for exams, solve tricky questions,
             and improve their understanding across all subjects.
           </p>
           <p className="mt-4">
