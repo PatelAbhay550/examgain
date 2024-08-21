@@ -1,3 +1,4 @@
+import ExamCategories from "@/components/sections/Categories";
 import Hero from "@/components/sections/Hero";
 import { suggestions } from "@/data/suggestions";
 import Link from "next/link";
@@ -8,6 +9,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ExamCategories />
+      <h2 className="text-center text-3xl font-semibold mb-8 text-blue-700">
+        Top Searched Questions
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {relatedQuestions.map((question, index) => (
           <div

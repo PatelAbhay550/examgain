@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const Header = () => {
   const navlinks = [
     { href: "/", text: "Ask" },
-    { href: "/login", text: "Login / Signup" },
+    { href: "/Auth", text: "Login / Signup" },
   ];
 
   const path = usePathname();
