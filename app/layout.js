@@ -14,6 +14,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
     <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8804622562841633"
+     crossorigin="anonymous"></script>
     <meta name="google-site-verification" content="CP-bBZfPoKzhXDdIAAeb5AvIDbZoMMJToPGRiBTbb00" />
     </head>
       <body className={roboto.className}>
