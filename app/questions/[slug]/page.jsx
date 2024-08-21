@@ -71,10 +71,13 @@ const Page = ({ params }) => {
         <p className="mt-2 text-base">Answer to this question is verified!</p>
       </div>
       <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-8">
-        <p className="text-lg">
-          <span className="font-bold text-zinc-700">Answer:</span> <br />
-          {questionData?.answer}
-        </p>
+        <span className="font-[800] text-zinc-700">Answer:</span> <br />
+        <div
+          className="text-lg"
+          dangerouslySetInnerHTML={{
+            __html: questionData.answer,
+          }}
+        />
       </div>
 
       {/* Related Questions Section */}
