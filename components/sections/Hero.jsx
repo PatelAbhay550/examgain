@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import Searchbox from "../Searchbox";
 import { suggestions } from "@/data/suggestions";
+import { FaRegNoteSticky } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -41,13 +42,10 @@ const Hero = () => {
 
           {/* Instant Search & Snap-to-Solve */}
           <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md text-center">
-            <AiOutlineCamera className="text-blue-500 text-4xl mb-4 mx-auto" />
-            <h2 className="text-xl font-bold mb-2">
-              Instant Search & Snap-to-Solve
-            </h2>
+            <FaRegNoteSticky className="text-blue-500 text-4xl mb-4 mx-auto" />
+            <h2 className="text-xl font-bold mb-2">Free Mock Tests</h2>
             <p className="text-gray-600">
-              Search by typing or simply use your camera to upload questions for
-              instant results.
+              Practice with our free mock tests and improve your exam scores.
             </p>
           </div>
 
@@ -69,7 +67,7 @@ const Hero = () => {
               Ready to Master Your Exams?
             </h2>
             <p className="text-gray-600">
-              Type in your query or snap a picture—let Examgain handle the rest.
+              Type in your query let Examgain handle the rest.
             </p>
           </div>
         </div>
