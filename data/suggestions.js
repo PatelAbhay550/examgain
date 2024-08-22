@@ -242,6 +242,164 @@ export const suggestions = [
   "answer": "Sikkim officially became a part of the Indian Republic in 1975. After a series of political developments and a referendum where the majority of Sikkimese people voted in favor of joining India, the Indian Parliament passed the 36th Amendment to the Constitution, making Sikkim the 22nd state of India on May 16, 1975.",
   "slug": "in-which-year-did-sikkim-join-indian-republic",
   "tags": ["history", "india", "geography", "ssc"]
+},
+ {
+  "question": "Famous books and their authors | SSC Exams | Static GK",
+  "answer": "<p>The list of famous books and their authors is crucial for competitive exams like SSC. Knowing the important books and their authors not only boosts your knowledge but also helps you score better in the General Knowledge section. This table below highlights key books and their authors that are frequently asked in SSC exams and other competitive exams. Prepare well and ace your exams with this important information.</p><table class=\"w-3/5\">
+    <thead>
+      <tr>
+        <th class=\"w-1/2 bg-blue-200\" colspan=\"2\">Important Books and Their Authors List</th>
+      </tr>
+      <tr>
+        <th class=\"w-1/2\">Books</th>
+        <th class=\"w-full\">Authors</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class=\"w-1/2\">Mudrarakshasa</td>
+        <td class=\"w-full\">Visakdatta</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Rajtarangini</td>
+        <td class=\"w-full\">Kalhana</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Kathasaritsagar</td>
+        <td class=\"w-full\">Somdeva</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Kamasutra</td>
+        <td class=\"w-full\">Vatsayana</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Prashnottarmalika</td>
+        <td class=\"w-full\">Amoghavarsha</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Swapanvasdattam</td>
+        <td class=\"w-full\">Bhasa</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Buddha Charita</td>
+        <td class=\"w-full\">Asvaghosa</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Natyashastra</td>
+        <td class=\"w-full\">Bharata</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Abhigyan Shakuntala</td>
+        <td class=\"w-full\">Kalidasa</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Vikramorvashi</td>
+        <td class=\"w-full\">Kalidasa</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Raghuvansan</td>
+        <td class=\"w-full\">Kalidasa</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Amarkosa</td>
+        <td class=\"w-full\">Amarshmha</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Panchsidhantika</td>
+        <td class=\"w-full\">Varharmihara</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Brihat Samhita</td>
+        <td class=\"w-full\">Varharmihara</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Surya Sidhanta</td>
+        <td class=\"w-full\">Aryabhatta</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Aryabhatta</td>
+        <td class=\"w-full\">Aryabhatta</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Panch tantra</td>
+        <td class=\"w-full\">Vishnu Sharma</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Nitisara</td>
+        <td class=\"w-full\">Kamandaka</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Aihole Prasasti</td>
+        <td class=\"w-full\">Ravi Kriti</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Indica</td>
+        <td class=\"w-full\">Megasthanese</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Arthasastra</td>
+        <td class=\"w-full\">Kautilya</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Charaka Samhita</td>
+        <td class=\"w-full\">Charaka</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Lilawati</td>
+        <td class=\"w-full\">Bhaskara II</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Harshacharita</td>
+        <td class=\"w-full\">Harsha Vardhan</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Kadambari</td>
+        <td class=\"w-full\">Banabhatta</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Nagananda</td>
+        <td class=\"w-full\">Harsha Vardhan</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Ratnavali</td>
+        <td class=\"w-full\">Harsha Vardhan</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Gathasaptashati</td>
+        <td class=\"w-full\">Hala</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Nitisara</td>
+        <td class=\"w-full\">Kamandaka</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Astadhyayi</td>
+        <td class=\"w-full\">Panini</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Mahabhasya</td>
+        <td class=\"w-full\">Patanjali</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Naishadhacharitra</td>
+        <td class=\"w-full\">Sri Harsha</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Mrichhakatika</td>
+        <td class=\"w-full\">Sudraka</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Gitagovinda</td>
+        <td class=\"w-full\">Jayadev</td>
+      </tr>
+      <tr>
+        <td class=\"w-1/2\">Navratna</td>
+        <td class=\"w-full\">Virasena</td>
+      </tr>
+    </tbody>
+  </table>",
+  "slug": "famous-books-and-authors-ssc",
+  "tags": ["ssc cgl", "static gk", "history", "ssc"]
 }
 
 
