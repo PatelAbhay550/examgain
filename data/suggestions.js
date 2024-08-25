@@ -255,6 +255,13 @@ export const suggestions = [
   "slug": "who-wrote-a-life-misspent-book",
   "tags": ["ssc cgl", "static gk", "writer", "ssc","Suryakant Tripathi"]
 }
+  ,
+ {
+  "question": "Who is the Oldest Member of 17th Lok Sabha?",
+  "answer": "Mr. T.R. Balu of DMK is he oldest Member of 17th Lok Sabha. He won Sriperumbudur Constituency at the age of 83. He has been elected 5 times since 1996 from Chennai South constituency and Sriperumbudur constituency.",
+  "slug": "oldest-member-of-17th-lok-sabha",
+  "tags": ["ssc cgl", "lok sabha", "MP", "ssc","TR Balu"]
+}
 
 
  
