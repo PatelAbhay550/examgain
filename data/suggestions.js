@@ -269,6 +269,13 @@ export const suggestions = [
   "slug": "bharat-ratna-2024-award-winners",
   "tags": ["ssc cgl", "bharat ratna", "Bharat Ratna Winners 2024", "ssc","Karpoori Thakur", "MS Swaminathan","LK Advani"]
 }
+   ,
+ {
+  "question": "Most Runs as a Test Opener | A List",
+  "answer": "<h2>List of Top 5 Most Runs as a test opener</h2><br/>As of June 2023, Alastair Cook of England holds the distinction of being the leading run-scorer as an opener in Test cricket, amassing 11,845 runs across 278 innings with an impressive average of 44.87. Cook stands alone as the only player in the history of Test cricket to have scored over 10,000 runs as an opener, and he has also notched up 31 centuries.Here are a few other prominent openers who have made significant contributions in Test cricket:<br/> Sunil Gavaskar: 9,607 runs<br/>Graeme Smith: 9,030 runs<br/>Matthew Hayden: 8,625 runs<br/>David Warner: 8,208 runs<br/>Virender Sehwag: 8,207 runs",
+  "slug": "most-runs-as-tests-opener",
+  "tags": ["ssc cgl", "cricket", "testopener", "ssc","Alaister cook", "Sunil Gavaskar","GK/GS"]
+}
 
 
  
