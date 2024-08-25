@@ -265,7 +265,7 @@ export const suggestions = [
    ,
  {
   "question": "Full List of 2024 Bharat Ratna Award Winners",
-  "answer": "In 2024, the Bharat Ratna award was conferred upon five recipients: Karpoori Thakur, Mankombu Sambasivan (M.S.) Swaminathan, P. V. Narasimha Rao, L. K. Advani, and Chaudhary Devi Lal. This makes 2024 the year with the highest number of recipients of the Bharat Ratna award.",
+  "answer": "<h2>List of All Bharat Ratna Winners 2024 </h2><br/>In 2024, the Bharat Ratna award was conferred upon five recipients: Karpoori Thakur, Mankombu Sambasivan (M.S.) Swaminathan, P. V. Narasimha Rao, L. K. Advani, and Chaudhary Devi Lal. This makes 2024 the year with the highest number of recipients of the Bharat Ratna award.",
   "slug": "bharat-ratna-2024-award-winners",
   "tags": ["ssc cgl", "bharat ratna", "Bharat Ratna Winners 2024", "ssc","Karpoori Thakur", "MS Swaminathan","LK Advani"]
 }
