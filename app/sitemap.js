@@ -3,19 +3,19 @@ import { suggestions } from "@/data/suggestions";
 export default function sitemap() {
   const staticUrls = [
     {
-      url: "https://www.guideblog.me",
+      url: "https://examgain.vercel.app",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: "https://www.guideblog.me/about",
+      url: "https://examgain.vercel.app/about",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://www.guideblog.me/privacy",
+      url: "https://examgain.vercel.app/privacy",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -23,7 +23,7 @@ export default function sitemap() {
   ];
 
   const questionUrls = suggestions.map((item) => ({
-    url: `https://www.guideblog.me/questions/${item.slug}`,
+    url: `https://examgain.vercel.app/questions/${item.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 1,
