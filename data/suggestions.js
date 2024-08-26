@@ -311,6 +311,18 @@ export const suggestions = [
     "indian history",
     "british india"
   ]
+},
+ {
+  "question": "Which author wrote 'Jane Eyre'?",
+  "answer": "<p><strong>Charlotte Brontë</strong> wrote the novel <em>Jane Eyre</em>, first published in 1847 under the pen name Currer Bell. The novel is a coming-of-age story that explores themes of love, morality, and social criticism through the life of its protagonist, Jane Eyre.</p>",
+  "slug": "which-author-wrote-jane-eyre",
+  "tags": [
+    "ssc",
+    "literature",
+    "novel",
+    "jane eyre",
+    "charlotte bronte"
+  ]
 }
 
 
