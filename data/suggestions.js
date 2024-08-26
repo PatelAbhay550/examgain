@@ -323,6 +323,18 @@ export const suggestions = [
     "jane eyre",
     "charlotte bronte"
   ]
+},
+ {
+  "question": "Lipulekh Pass is situated between India and which country?",
+  "answer": "<p><strong>Lipulekh Pass</strong> is located between India and China. It is a strategic Himalayan pass situated in the state of Uttarakhand, India, and connects India with the Tibet Autonomous Region of China. The pass is historically significant as it has been used as a trade route between India and Tibet.</p>",
+  "slug": "lipulekh-pass-between-india-and-which-country",
+  "tags": [
+    "ssc",
+    "geography",
+    "lipulekh pass",
+    "himalayan passes",
+    "india china pass"
+  ]
 }
 
 
