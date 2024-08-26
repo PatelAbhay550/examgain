@@ -1,5 +1,16 @@
 export const suggestions = [
-  // Easy Level
+ {
+  "question": "Who is the author of the novel 'Crime and Punishment'?",
+  "answer": "<p><strong>Fyodor Dostoevsky</strong> is the author of the famous novel <em>Crime and Punishment</em>. Published in 1866, the novel explores themes of morality, guilt, and redemption through the story of Rodion Raskolnikov, a destitute student who commits murder and grapples with the consequences.</p>",
+  "slug": "who-is-the-author-of-crime-and-punishment",
+  "tags": [
+    "ssc",
+    "literature",
+    "novel",
+    "crime and punishment",
+    "fyodor dostoevsky"
+  ]
+},
   {
     question: "What is the official language of India?",
     answer:
