@@ -283,12 +283,13 @@ export const suggestions = [
   "slug": "samudragupta-short-biography",
   "tags": ["ssc cgl", "samudragupta", "gupta dynasty", "ssc","sri gupta", "Nepolean of India","Ancient History"]
 },
-  {
+ {
   "question": "Who Wrote Vande Mataram, India's National Song?",
-  "answer": "<p>\n\t<em><strong>Vande Mataram</strong></em> is a revered Sanskrit poem penned by Bankim Chandra Chatterjee, <strong><span style=\"text-decoration: underline;\">originally included in his 1882 novel </span></strong><em><strong><span style=\"text-decoration: underline;\">Anandamath</span></strong></em>. This stirring composition became a powerful symbol of India's freedom struggle, embodying the spirit of patriotism and resistance against colonial rule. The poem's profound influence led to its first public rendition by Rabindranath Tagore in 1896.\n</p>\n<p><strong>On January 24, 1950</strong>, <em>the Constituent Assembly of India officially adopted Vande Mataram</em>, solidifying its status as a national song. The soulful music for the anthem was composed by <strong><span style=\"text-decoration: underline;\">Jadhunath Bhattacharya</span></strong>, whose composition continues to inspire millions across India.\n</p>",
-"slug":"who-wrote-national-song-of-india",
-"tags:["ssc","ssc cgl", "anandmath", "national song writer", "bankim chandra chaterjee"]
-  }
+  "answer": "<p>\n\t<em><strong>Vande Mataram</strong></em> is a revered Sanskrit poem penned by Bankim Chandra Chatterjee, <strong><span style=\"text-decoration: underline;\">originally included in his 1882 novel</span></strong> <em><strong><span style=\"text-decoration: underline;\">Anandamath</span></strong></em>. This stirring composition became a powerful symbol of India's freedom struggle, embodying the spirit of patriotism and resistance against colonial rule. The poem's profound influence led to its first public rendition by Rabindranath Tagore in 1896.\n</p>\n<p><strong>On January 24, 1950</strong>, <em>the Constituent Assembly of India officially adopted Vande Mataram</em>, solidifying its status as a national song. The soulful music for the anthem was composed by <strong><span style=\"text-decoration: underline;\">Jadhunath Bhattacharya</span></strong>, whose composition continues to inspire millions across India.\n</p>",
+  "slug": "who-wrote-national-song-of-india",
+  "tags": ["ssc", "ssc cgl", "anandmath", "national song writer", "bankim chandra chatterjee"]
+}
+
 
  
 ];
