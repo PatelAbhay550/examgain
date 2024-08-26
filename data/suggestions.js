@@ -288,6 +288,18 @@ export const suggestions = [
   "answer": "<p>\n\t<em><strong>Vande Mataram</strong></em> is a revered Sanskrit poem penned by Bankim Chandra Chatterjee, <strong><span style=\"text-decoration: underline;\">originally included in his 1882 novel</span></strong> <em><strong><span style=\"text-decoration: underline;\">Anandamath</span></strong></em>. This stirring composition became a powerful symbol of India's freedom struggle, embodying the spirit of patriotism and resistance against colonial rule. The poem's profound influence led to its first public rendition by Rabindranath Tagore in 1896.\n</p>\n<p><strong>On January 24, 1950</strong>, <em>the Constituent Assembly of India officially adopted Vande Mataram</em>, solidifying its status as a national song. The soulful music for the anthem was composed by <strong><span style=\"text-decoration: underline;\">Jadhunath Bhattacharya</span></strong>, whose composition continues to inspire millions across India.\n</p>",
   "slug": "who-wrote-national-song-of-india",
   "tags": ["ssc", "ssc cgl", "anandmath", "national song writer", "bankim chandra chatterjee"]
+},
+  {
+  "question": "Name the Commission that came to India in 1928 to reform India's constitutional system.",
+  "answer": "<p><strong>Simon Commission</strong></p><p>Formed in 1927, the Simon Commission was established to evaluate the political situation in India and propose reforms. It arrived in India on 3rd February 1928. However, the commission faced widespread opposition across the country due to the absence of any Indian members. The commission was composed of seven British members, chaired by Sir John Simon, with Clement Attlee as one of the prominent figures.</p>",
+  "slug": "name-the-commission-that-came-to-india-in-1928",
+  "tags": [
+    "ssc",
+    "ssc cgl",
+    "simon comission",
+    "indian history",
+    "british india"
+  ]
 }
 
 
