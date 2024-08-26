@@ -335,6 +335,18 @@ export const suggestions = [
     "himalayan passes",
     "india china pass"
   ]
+},
+ {
+  "question": "Who wrote the book 'Human Rights and Human Wrongs'?",
+  "answer": "<p><strong>Upendra Baxi</strong> wrote the book <em>Human Rights and Human Wrongs</em>. Baxi, a renowned legal scholar and professor, explores critical issues surrounding human rights, focusing on the injustices and ethical dilemmas within the global human rights framework.</p>",
+  "slug": "who-wrote-human-rights-and-human-wrongs",
+  "tags": [
+    "ssc",
+    "books",
+    "upendra baxi",
+    "literature",
+    "law and order books"
+  ]
 }
 
 
