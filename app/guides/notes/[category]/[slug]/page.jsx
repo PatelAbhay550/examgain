@@ -111,7 +111,7 @@ export async function generateMetadata({ params }) {
 
   // Return metadata based on the post
   return {
-    title: `${post.title} - Guideblog`,
+    title: `${post.title} - Examgain`,
     description: post.description
       ? `${post.description.slice(0, 110)}...`
       : "No description available.",
