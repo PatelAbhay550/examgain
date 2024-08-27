@@ -78,7 +78,7 @@ const page = async ({ params }) => {
       <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-6 rounded-lg mb-8">
         <span className="font-bold text-zinc-700">Content:</span>
         <div
-          className="mt-4 prose prose-lg max-w-none"
+          className="mt-4 prose prose-lg max-w-none text-justify"
           dangerouslySetInnerHTML={{
             __html: data.Content,
           }}
