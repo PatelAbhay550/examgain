@@ -77,3 +77,14 @@ const Notes = async ({ params }) => {
 };
 
 export default Notes;
+export async function generateMetadata({ params }) {
+  const { category } = params;
+  const form = category.toUpperCase();
+
+  // Return metadata based on the post
+  return {
+    title: `Short Notes for ${form} Exams | ExamGain`,
+    description: `Get comprehensive study notes for the ${category}. Each note covers essential topics and is designed to help you succeed in your ${category} exams. Dive into the material, and don't forget to check out the mock tests and practice questions!`,
+    keywords: `[${form} Notes, ${form} Study Material, ${form} Exam Notes, ${form} Short Notes]`,
+  };
+}
