@@ -1,10 +1,12 @@
 import { suggestions } from "@/data/suggestions";
 import React from "react";
+
 export async function generateStaticParams() {
   return suggestions.map((item) => ({
     slug: item.slug,
   }));
 }
+
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const questionData = suggestions?.find((item) => item.slug === slug);
@@ -38,11 +40,40 @@ const Page = ({ params }) => {
   // Generate JSON-LD structured data
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Question",
-    name: questionData.question,
-    acceptedAnswer: {
-      "@type": "Answer",
+    "@type": "QAPage",
+    mainEntity: {
+      "@type": "Question",
+      name: questionData.question,
       text: questionData.answer,
+      answerCount: questionData?.answers?.length || 1, // Assuming each question has at least one answer
+      upvoteCount: questionData.upvoteCount || 0, // Replace with actual upvote count
+      dateCreated: questionData.dateCreated || "2024-08-27T00:00Z", // Replace with actual date
+      author: {
+        "@type": "Person",
+        name: questionData.author || "Abhay Patel", // Replace with actual author
+      },
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: questionData.answer,
+        dateCreated: questionData.dateCreated || "2024-08-27T00:00Z", // Replace with actual date
+        upvoteCount: questionData.upvoteCount || 4, // Replace with actual upvote count
+        url: `https://examgain.vercel.app/questions/${slug}`, // Replace with actual URL
+        author: {
+          "@type": "Person",
+          name: questionData.author || "Abhay Patel", // Replace with actual author
+        },
+      },
+      suggestedAnswer: questionData.suggestedAnswers?.map((answer, index) => ({
+        "@type": "Answer",
+        text: answer.text,
+        dateCreated: answer.dateCreated || "2024-08-27T00:00Z", // Replace with actual date
+        upvoteCount: answer.upvoteCount || 4, // Replace with actual upvote count
+        url: `https://examgain.vercel.app/questions/${slug}${index + 1}`, // Replace with actual URL
+        author: {
+          "@type": "Person",
+          name: answer.author || "Abhay Patel", // Replace with actual author
+        },
+      })),
     },
   };
 
