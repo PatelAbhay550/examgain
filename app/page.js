@@ -24,7 +24,7 @@ export default function Home() {
                 {question.question}
               </h3>
             </Link>
-            <p className="text-gray-600">{question.answer}</p>
+            
           </div>
         ))}
       </div>
