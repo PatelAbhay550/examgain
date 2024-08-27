@@ -4,7 +4,8 @@ import React, { useState } from "react";
 
 const Header = () => {
   const navlinks = [
-    { href: "/", text: "Ask" },
+    { href: "/", text: "Search" },
+    { href: "/guides", text: "Guides" },
     { href: "/Auth", text: "Login / Signup" },
   ];
 
