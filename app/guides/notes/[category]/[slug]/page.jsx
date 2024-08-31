@@ -78,7 +78,7 @@ const page = async ({ params }) => {
       <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-6 rounded-lg mb-8">
         <span className="font-bold text-zinc-700">Content:</span>
         <div
-          className="mt-4 prose prose-lg max-w-none text-justify"
+          className="mt-4 prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{
             __html: data.Content,
           }}
@@ -111,7 +111,7 @@ export async function generateMetadata({ params }) {
 
   // Return metadata based on the post
   return {
-    title: `${post.title} - Examgain`,
+    title: `${post.title} - Guideblog`,
     description: post.description
       ? `${post.description.slice(0, 110)}...`
       : "No description available.",
