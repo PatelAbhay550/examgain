@@ -7,6 +7,7 @@ import {
   FiSkipForward,
   FiArrowLeft,
   FiArrowRight,
+  FiClock,
 } from "react-icons/fi";
 
 const Quiz = ({ params }) => {
@@ -24,6 +25,7 @@ const Quiz = ({ params }) => {
     score: 0,
     correctAnswers: 0,
     wrongAnswers: 0,
+    totalTimeUsed: 0,
   });
   const [timeRemaining, setTimeRemaining] = useState(600); // 10 minutes in seconds
   const [startTime, setStartTime] = useState(null);
@@ -122,10 +124,9 @@ const Quiz = ({ params }) => {
       }
     });
 
-    setResult({ score, correctAnswers, wrongAnswers });
+    setResult({ score, correctAnswers, wrongAnswers, totalTimeUsed });
     setWrongQuestions(incorrectQuestions);
     setSkippedQuestions(skippedQs);
-    console.log(`Total time used: ${totalTimeUsed} seconds`);
   };
 
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`);
@@ -138,7 +139,7 @@ const Quiz = ({ params }) => {
   const quizDetails = level ? quiz[level] : {};
 
   return (
-    <div className="quiz-container mx-auto md:mt-32 mt-16 mb-52 p-4 max-w-xl">
+    <div className="quiz-container mx-auto md:mt-20 mt-16 mb-52 p-4 max-w-xl">
       <h1 className="text-center text-4xl font-bold text-blue-600 mb-6">
         {slug.toUpperCase()} Quiz
       </h1>
@@ -182,6 +183,12 @@ const Quiz = ({ params }) => {
         </form>
       ) : !showResult ? (
         <div>
+          <div className="text-center mt-6">
+            <span className="text-xl font-semibold text-gray-800">
+              Time Remaining: {formatTime(timeRemaining)}
+            </span>
+          </div>
+
           <div className="flex justify-between items-center mb-4">
             <span className="text-xl font-semibold text-blue-600">
               {addLeadingZero(activeQuestion + 1)}
@@ -230,9 +237,16 @@ const Quiz = ({ params }) => {
               <FiArrowRight className="inline ml-2" />
             </button>
           </div>
-          <div className="text-center mt-6">
-            <p className="text-lg font-semibold">
-              Time Remaining: {formatTime(timeRemaining)}
+          <div className="quiz-details text-center mt-6">
+            <h2 className="text-2xl font-semibold mb-4">Quiz Details:</h2>
+            <p className="text-lg">
+              <strong>Subject:</strong> {slug.toUpperCase()}
+            </p>
+            <p className="text-lg">
+              <strong>Number of Questions:</strong> {questions.length}
+            </p>
+            <p className="text-lg">
+              <strong>Time Limit:</strong> 10 minutes
             </p>
           </div>
         </div>
@@ -248,13 +262,19 @@ const Quiz = ({ params }) => {
             <strong>Total Questions:</strong> {questions.length}
           </p>
           <p className="text-lg mb-2">
-            <strong>Correct Answers:</strong> {result.correctAnswers}
+            <strong>Correct Answers:</strong> {result.correctAnswers}{" "}
+            <FiCheckCircle className="inline text-green-500" />
           </p>
           <p className="text-lg mb-2">
-            <strong>Incorrect Answers:</strong> {result.wrongAnswers}
+            <strong>Incorrect Answers:</strong> {result.wrongAnswers}{" "}
+            <FiXCircle className="inline text-red-500" />
           </p>
           <p className="text-lg mb-2">
             <strong>Score:</strong> {result.score.toFixed(2)}
+          </p>
+          <p className="text-lg mb-2">
+            <strong>Time Used:</strong> {formatTime(result.totalTimeUsed)}
+            <FiClock className="inline text-gray-600 ml-2" />
           </p>
           <div className="mt-4">
             <h4 className="text-xl font-semibold mb-2">Incorrect Questions:</h4>
