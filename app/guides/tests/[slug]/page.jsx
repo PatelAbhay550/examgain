@@ -158,7 +158,7 @@ const Quiz = ({ params }) => {
       {!isLevelSelected ? (
         <div className="level-selection text-center">
           <h2 className="text-2xl font-semibold mb-4">
-            Select Difficulty Level:
+            Select A Quiz to start:
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {Object.keys(quiz).map((level) => (
