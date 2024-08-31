@@ -118,7 +118,7 @@ export const quiz = [
           "In a certain code language, 'BRAIN' is written as 'AQZHM'. How will 'HEART' be written in the same code?",
         choices: ["GDZQS", "GDSZQ", "GDRZS", "GDSRQ"],
         type: "MCQs",
-        correctAnswer: "GDSZQ",
+        correctAnswer: "GDZQS",
       },
       {
         question: "Choose the correct synonym for the word 'Inevitable'.",
