@@ -25,40 +25,38 @@ const Quiz = ({ params }) => {
     score: 0,
     correctAnswers: 0,
     wrongAnswers: 0,
-    totalTimeUsed: 0,
+    timeUsed: 0,
   });
-  const [timeRemaining, setTimeRemaining] = useState(600); // 10 minutes in seconds
-  const [startTime, setStartTime] = useState(null);
+  const [timer, setTimer] = useState(600); // 10 minutes in seconds
+  const [intervalId, setIntervalId] = useState(null);
 
   // Filter questions based on the selected level
   const questions = level ? quiz[level].questions : [];
   const { question, choices, correctAnswer } = questions[activeQuestion] || {};
 
   useEffect(() => {
-    if (isNameEntered && level) {
-      setStartTime(Date.now());
-      const timer = setInterval(() => {
-        setTimeRemaining((prevTime) => {
-          if (prevTime <= 1) {
-            clearInterval(timer);
-            handleQuizEnd();
+    if (isNameEntered && !showResult) {
+      const id = setInterval(() => {
+        setTimer((prev) => {
+          if (prev <= 0) {
+            clearInterval(id);
+            calculateResult();
+            setShowResult(true);
             return 0;
           }
-          return prevTime - 1;
+          return prev - 1;
         });
       }, 1000);
-      return () => clearInterval(timer);
+      setIntervalId(id);
     }
-  }, [isNameEntered, level]);
 
-  const handleQuizEnd = () => {
-    calculateResult();
-    setShowResult(true);
-  };
+    return () => clearInterval(intervalId);
+  }, [isNameEntered, showResult]);
 
   const onClickNext = () => {
     if (activeQuestion === questions.length - 1) {
-      handleQuizEnd();
+      calculateResult();
+      setShowResult(true);
     } else {
       setActiveQuestion((prev) => prev + 1);
     }
@@ -75,17 +73,23 @@ const Quiz = ({ params }) => {
     newAnswers[activeQuestion] = {
       answer,
       correct: answer === correctAnswer,
-      timeTaken: (Date.now() - startTime) / 1000,
     };
     setAnswers(newAnswers);
   };
 
   const onSkipQuestion = () => {
-    setSkippedQuestions((prev) => [...prev, questions[activeQuestion]]);
+    setSkippedQuestions((prev) => [
+      ...prev,
+      {
+        ...questions[activeQuestion],
+        selectedAnswer: answers[activeQuestion]?.answer || "None",
+      },
+    ]);
     if (activeQuestion !== questions.length - 1) {
       setActiveQuestion((prev) => prev + 1);
     } else {
-      handleQuizEnd();
+      calculateResult();
+      setShowResult(true);
     }
   };
 
@@ -107,7 +111,6 @@ const Quiz = ({ params }) => {
     let wrongAnswers = 0;
     const incorrectQuestions = [];
     const skippedQs = [];
-    const totalTimeUsed = (Date.now() - startTime) / 1000; // in seconds
 
     answers.forEach((answerObj, index) => {
       if (answerObj) {
@@ -117,14 +120,25 @@ const Quiz = ({ params }) => {
         } else {
           score -= 0.5;
           wrongAnswers += 1;
-          incorrectQuestions.push(questions[index]);
+          incorrectQuestions.push({
+            ...questions[index],
+            selectedAnswer: answerObj.answer,
+          });
         }
       } else {
-        skippedQs.push(questions[index]);
+        skippedQs.push({
+          ...questions[index],
+          selectedAnswer: answers[index]?.answer || "None",
+        });
       }
     });
 
-    setResult({ score, correctAnswers, wrongAnswers, totalTimeUsed });
+    setResult({
+      score,
+      correctAnswers,
+      wrongAnswers,
+      timeUsed: 600 - timer, // Convert seconds to minutes
+    });
     setWrongQuestions(incorrectQuestions);
     setSkippedQuestions(skippedQs);
   };
@@ -136,10 +150,8 @@ const Quiz = ({ params }) => {
     return `${addLeadingZero(minutes)}:${addLeadingZero(secs)}`;
   };
 
-  const quizDetails = level ? quiz[level] : {};
-
   return (
-    <div className="quiz-container mx-auto md:mt-20 mt-16 mb-52 p-4 max-w-xl">
+    <div className="quiz-container mx-auto md:mt-32 mt-16 mb-52 p-4 max-w-xl">
       <h1 className="text-center text-4xl font-bold text-blue-600 mb-6">
         {slug.toUpperCase()} Quiz
       </h1>
@@ -183,12 +195,6 @@ const Quiz = ({ params }) => {
         </form>
       ) : !showResult ? (
         <div>
-          <div className="text-center mt-6">
-            <span className="text-xl font-semibold text-gray-800">
-              Time Remaining: {formatTime(timeRemaining)}
-            </span>
-          </div>
-
           <div className="flex justify-between items-center mb-4">
             <span className="text-xl font-semibold text-blue-600">
               {addLeadingZero(activeQuestion + 1)}
@@ -237,70 +243,70 @@ const Quiz = ({ params }) => {
               <FiArrowRight className="inline ml-2" />
             </button>
           </div>
-          <div className="quiz-details text-center mt-6">
-            <h2 className="text-2xl font-semibold mb-4">Quiz Details:</h2>
-            <p className="text-lg">
-              <strong>Subject:</strong> {slug.toUpperCase()}
-            </p>
-            <p className="text-lg">
-              <strong>Number of Questions:</strong> {questions.length}
-            </p>
-            <p className="text-lg">
-              <strong>Time Limit:</strong> 10 minutes
-            </p>
+          <div className="mt-6 text-center">
+            <span className="text-lg font-semibold">Time Remaining: </span>
+            <span className="text-lg font-semibold text-red-600">
+              {formatTime(timer)}
+            </span>
           </div>
         </div>
       ) : (
-        <div className="result text-center">
-          <h3 className="text-3xl font-bold text-blue-600 mb-4">
-            Quiz Results
-          </h3>
-          <p className="text-lg mb-2">
-            <strong>Name:</strong> {userName}
+        <div className="result-summary text-center">
+          <h2 className="text-2xl font-semibold mb-4">Quiz Results</h2>
+          <p className="text-xl mb-2">Name: {userName}</p>
+          <p className="text-xl mb-2">Total Questions: {questions.length}</p>
+          <p className="text-xl mb-2">
+            Correct Answers: {result.correctAnswers}
           </p>
-          <p className="text-lg mb-2">
-            <strong>Total Questions:</strong> {questions.length}
+          <p className="text-xl mb-2">
+            Incorrect Answers: {result.wrongAnswers}
           </p>
-          <p className="text-lg mb-2">
-            <strong>Correct Answers:</strong> {result.correctAnswers}{" "}
-            <FiCheckCircle className="inline text-green-500" />
+          <p className="text-xl mb-2">Total Score: {result.score}</p>
+          <p className="text-xl mb-2">
+            Time Used: {formatTime(result.timeUsed)}
           </p>
-          <p className="text-lg mb-2">
-            <strong>Incorrect Answers:</strong> {result.wrongAnswers}{" "}
-            <FiXCircle className="inline text-red-500" />
-          </p>
-          <p className="text-lg mb-2">
-            <strong>Score:</strong> {result.score.toFixed(2)}
-          </p>
-          <p className="text-lg mb-2">
-            <strong>Time Used:</strong> {formatTime(result.totalTimeUsed)}
-            <FiClock className="inline text-gray-600 ml-2" />
-          </p>
-          <div className="mt-4">
-            <h4 className="text-xl font-semibold mb-2">Incorrect Questions:</h4>
-            <ul>
-              {wrongQuestions.map((question, index) => (
-                <li key={index} className="mb-1">
-                  {question.question}
+
+          <div className="incorrect-answers mt-8">
+            <h3 className="text-xl font-semibold mb-2">Incorrect Answers</h3>
+            <ul className="space-y-2">
+              {wrongQuestions.map((q, index) => (
+                <li
+                  key={index}
+                  className="p-4 border rounded-md bg-red-50 text-red-600"
+                >
+                  <p className="font-semibold mb-1">{q.question}</p>
+                  <p>Selected Answer: {q.selectedAnswer}</p>
+                  <p className="mt-2 font-semibold">
+                    Correct Answer: {q.correctAnswer}
+                  </p>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="mt-4">
-            <h4 className="text-xl font-semibold mb-2">Skipped Questions:</h4>
-            <ul>
-              {skippedQuestions.map((question, index) => (
-                <li key={index} className="mb-1">
-                  {question.question}
+
+          <div className="skipped-questions mt-8">
+            <h3 className="text-xl font-semibold mb-2">Skipped Questions</h3>
+            <ul className="space-y-2">
+              {skippedQuestions.map((q, index) => (
+                <li
+                  key={index}
+                  className="p-4 border rounded-md bg-yellow-50 text-yellow-600"
+                >
+                  <p className="font-semibold mb-1">{q.question}</p>
+                  <p>Selected Answer: {q.selectedAnswer}</p>
+                  <p className="mt-2 font-semibold">
+                    Correct Answer: {q.correctAnswer}
+                  </p>
                 </li>
               ))}
             </ul>
           </div>
+
           <button
             onClick={() => window.location.reload()}
-            className="bg-blue-600 text-white py-2 px-4 rounded-md mt-4 hover:bg-blue-700"
+            className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 mt-8"
           >
-            Restart Quiz
+            Retry Quiz
           </button>
         </div>
       )}
