@@ -1,17 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { quiz } from "@/data/questions"; // Adjust this import as needed
-import { FiCheckCircle, FiXCircle } from "react-icons/fi";
+import {
+  FiCheckCircle,
+  FiXCircle,
+  FiSkipForward,
+  FiArrowLeft,
+  FiArrowRight,
+} from "react-icons/fi";
 
 const Quiz = ({ params }) => {
   const { slug } = params;
   const [activeQuestion, setActiveQuestion] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState("");
+  const [answers, setAnswers] = useState([]); // Store user answers
   const [showResult, setShowResult] = useState(false);
-  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [userName, setUserName] = useState("");
   const [isNameEntered, setIsNameEntered] = useState(false);
   const [wrongQuestions, setWrongQuestions] = useState([]);
+  const [skippedQuestions, setSkippedQuestions] = useState([]);
   const [level, setLevel] = useState(null);
   const [isLevelSelected, setIsLevelSelected] = useState(false);
   const [result, setResult] = useState({
@@ -19,38 +25,66 @@ const Quiz = ({ params }) => {
     correctAnswers: 0,
     wrongAnswers: 0,
   });
+  const [timeRemaining, setTimeRemaining] = useState(600); // 10 minutes in seconds
+  const [startTime, setStartTime] = useState(null);
 
   // Filter questions based on the selected level
   const questions = level ? quiz[level].questions : [];
   const { question, choices, correctAnswer } = questions[activeQuestion] || {};
 
-  const onClickNext = () => {
-    setSelectedAnswerIndex(null);
-    if (selectedAnswer) {
-      setResult((prev) => ({
-        ...prev,
-        score: prev.score + 2,
-        correctAnswers: prev.correctAnswers + 1,
-      }));
-    } else {
-      setResult((prev) => ({
-        ...prev,
-        score: prev.score - 0.5,
-        wrongAnswers: prev.wrongAnswers + 1,
-      }));
-      setWrongQuestions((prev) => [...prev, questions[activeQuestion]]);
+  useEffect(() => {
+    if (isNameEntered && level) {
+      setStartTime(Date.now());
+      const timer = setInterval(() => {
+        setTimeRemaining((prevTime) => {
+          if (prevTime <= 1) {
+            clearInterval(timer);
+            handleQuizEnd();
+            return 0;
+          }
+          return prevTime - 1;
+        });
+      }, 1000);
+      return () => clearInterval(timer);
     }
+  }, [isNameEntered, level]);
 
-    if (activeQuestion !== questions.length - 1) {
-      setActiveQuestion((prev) => prev + 1);
+  const handleQuizEnd = () => {
+    calculateResult();
+    setShowResult(true);
+  };
+
+  const onClickNext = () => {
+    if (activeQuestion === questions.length - 1) {
+      handleQuizEnd();
     } else {
-      setShowResult(true);
+      setActiveQuestion((prev) => prev + 1);
     }
   };
 
-  const onAnswerSelected = (answer, index) => {
-    setSelectedAnswerIndex(index);
-    setSelectedAnswer(answer === correctAnswer);
+  const onClickPrevious = () => {
+    if (activeQuestion > 0) {
+      setActiveQuestion((prev) => prev - 1);
+    }
+  };
+
+  const onAnswerSelected = (answer) => {
+    const newAnswers = [...answers];
+    newAnswers[activeQuestion] = {
+      answer,
+      correct: answer === correctAnswer,
+      timeTaken: (Date.now() - startTime) / 1000,
+    };
+    setAnswers(newAnswers);
+  };
+
+  const onSkipQuestion = () => {
+    setSkippedQuestions((prev) => [...prev, questions[activeQuestion]]);
+    if (activeQuestion !== questions.length - 1) {
+      setActiveQuestion((prev) => prev + 1);
+    } else {
+      handleQuizEnd();
+    }
   };
 
   const handleNameSubmit = (e) => {
@@ -65,7 +99,43 @@ const Quiz = ({ params }) => {
     setIsLevelSelected(true);
   };
 
+  const calculateResult = () => {
+    let score = 0;
+    let correctAnswers = 0;
+    let wrongAnswers = 0;
+    const incorrectQuestions = [];
+    const skippedQs = [];
+    const totalTimeUsed = (Date.now() - startTime) / 1000; // in seconds
+
+    answers.forEach((answerObj, index) => {
+      if (answerObj) {
+        if (answerObj.correct) {
+          score += 2;
+          correctAnswers += 1;
+        } else {
+          score -= 0.5;
+          wrongAnswers += 1;
+          incorrectQuestions.push(questions[index]);
+        }
+      } else {
+        skippedQs.push(questions[index]);
+      }
+    });
+
+    setResult({ score, correctAnswers, wrongAnswers });
+    setWrongQuestions(incorrectQuestions);
+    setSkippedQuestions(skippedQs);
+    console.log(`Total time used: ${totalTimeUsed} seconds`);
+  };
+
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`);
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${addLeadingZero(minutes)}:${addLeadingZero(secs)}`;
+  };
+
+  const quizDetails = level ? quiz[level] : {};
 
   return (
     <div className="quiz-container mx-auto md:mt-32 mt-16 mb-52 p-4 max-w-xl">
@@ -124,12 +194,12 @@ const Quiz = ({ params }) => {
             {question}
           </h2>
           <ul className="space-y-2">
-            {choices.map((answer, index) => (
+            {choices.map((answer) => (
               <li
                 key={answer}
-                onClick={() => onAnswerSelected(answer, index)}
+                onClick={() => onAnswerSelected(answer)}
                 className={`p-4 border rounded-md cursor-pointer ${
-                  selectedAnswerIndex === index
+                  answers[activeQuestion]?.answer === answer
                     ? "bg-blue-600 text-white"
                     : "bg-white text-gray-800 border-blue-400 hover:bg-blue-100"
                 }`}
@@ -138,59 +208,79 @@ const Quiz = ({ params }) => {
               </li>
             ))}
           </ul>
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-between mt-6">
+            <button
+              onClick={onClickPrevious}
+              className="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700"
+              disabled={activeQuestion === 0}
+            >
+              <FiArrowLeft className="inline mr-2" /> Previous
+            </button>
+            <button
+              onClick={onSkipQuestion}
+              className="bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600"
+            >
+              <FiSkipForward className="inline mr-2" /> Skip
+            </button>
             <button
               onClick={onClickNext}
-              disabled={selectedAnswerIndex === null}
-              className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 disabled:bg-gray-400"
+              className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
             >
               {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
+              <FiArrowRight className="inline ml-2" />
             </button>
+          </div>
+          <div className="text-center mt-6">
+            <p className="text-lg font-semibold">
+              Time Remaining: {formatTime(timeRemaining)}
+            </p>
           </div>
         </div>
       ) : (
         <div className="result text-center">
-          <h3 className="text-3xl font-bold text-blue-600 mb-6">Result</h3>
+          <h3 className="text-3xl font-bold text-blue-600 mb-4">
+            Quiz Results
+          </h3>
           <p className="text-lg mb-2">
-            <FiCheckCircle className="inline mr-2 text-green-500" /> Name:{" "}
-            <span className="font-semibold">{userName}</span>
-          </p>
-          <p className="text-lg mb-2">
-            Total Questions:{" "}
-            <span className="font-semibold">{questions.length}</span>
+            <strong>Name:</strong> {userName}
           </p>
           <p className="text-lg mb-2">
-            Total Score: <span className="font-semibold">{result.score}</span>
+            <strong>Total Questions:</strong> {questions.length}
           </p>
           <p className="text-lg mb-2">
-            Correct Answers:{" "}
-            <span className="font-semibold">{result.correctAnswers}</span>
+            <strong>Correct Answers:</strong> {result.correctAnswers}
           </p>
-          <p className="text-lg mb-6">
-            Wrong Answers:{" "}
-            <span className="font-semibold">{result.wrongAnswers}</span>
+          <p className="text-lg mb-2">
+            <strong>Incorrect Answers:</strong> {result.wrongAnswers}
           </p>
-          {wrongQuestions.length > 0 && (
-            <div>
-              <h4 className="text-2xl font-semibold mb-4">Wrong Questions:</h4>
-              <ul className="space-y-2">
-                {wrongQuestions.map((q, index) => (
-                  <li key={index} className="bg-red-100 p-4 rounded-md">
-                    <h5 className="text-lg font-semibold mb-2">{q.question}</h5>
-                    <p className="text-sm text-gray-700">
-                      Correct Answer:{" "}
-                      <span className="font-semibold">{q.correctAnswer}</span>
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <p className="text-lg mb-2">
+            <strong>Score:</strong> {result.score.toFixed(2)}
+          </p>
+          <div className="mt-4">
+            <h4 className="text-xl font-semibold mb-2">Incorrect Questions:</h4>
+            <ul>
+              {wrongQuestions.map((question, index) => (
+                <li key={index} className="mb-1">
+                  {question.question}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-4">
+            <h4 className="text-xl font-semibold mb-2">Skipped Questions:</h4>
+            <ul>
+              {skippedQuestions.map((question, index) => (
+                <li key={index} className="mb-1">
+                  {question.question}
+                </li>
+              ))}
+            </ul>
+          </div>
           <button
             onClick={() => window.location.reload()}
-            className="bg-blue-600 text-white py-2 px-4 rounded-md mt-6 hover:bg-blue-700"
+            className="bg-blue-600 text-white py-2 px-4 rounded-md mt-4 hover:bg-blue-700"
           >
-            ReAttempt
+            Restart Quiz
           </button>
         </div>
       )}
