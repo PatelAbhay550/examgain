@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { quiz } from "@/data/questions";
+import { quiz } from "@/data/questions"; // Adjust this import as needed
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 
 const Quiz = ({ params }) => {
@@ -12,14 +12,17 @@ const Quiz = ({ params }) => {
   const [userName, setUserName] = useState("");
   const [isNameEntered, setIsNameEntered] = useState(false);
   const [wrongQuestions, setWrongQuestions] = useState([]);
+  const [level, setLevel] = useState(null);
+  const [isLevelSelected, setIsLevelSelected] = useState(false);
   const [result, setResult] = useState({
     score: 0,
     correctAnswers: 0,
     wrongAnswers: 0,
   });
 
-  const { questions } = quiz;
-  const { question, choices, correctAnswer } = questions[activeQuestion];
+  // Filter questions based on the selected level
+  const questions = level ? quiz[level].questions : [];
+  const { question, choices, correctAnswer } = questions[activeQuestion] || {};
 
   const onClickNext = () => {
     setSelectedAnswerIndex(null);
@@ -57,6 +60,11 @@ const Quiz = ({ params }) => {
     }
   };
 
+  const handleLevelSelect = (selectedLevel) => {
+    setLevel(selectedLevel);
+    setIsLevelSelected(true);
+  };
+
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`);
 
   return (
@@ -64,7 +72,24 @@ const Quiz = ({ params }) => {
       <h1 className="text-center text-4xl font-bold text-blue-600 mb-6">
         {slug.toUpperCase()} Quiz
       </h1>
-      {!isNameEntered ? (
+      {!isLevelSelected ? (
+        <div className="level-selection text-center">
+          <h2 className="text-2xl font-semibold mb-4">
+            Select Difficulty Level:
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {Object.keys(quiz).map((level) => (
+              <button
+                key={level}
+                onClick={() => handleLevelSelect(level)}
+                className="bg-blue-600 text-white py-4 rounded-md hover:bg-blue-700"
+              >
+                {level.charAt(0).toUpperCase() + level.slice(1)}
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : !isNameEntered ? (
         <form onSubmit={handleNameSubmit} className="name-form text-center">
           <label htmlFor="username" className="block text-lg mb-2">
             Enter your name:
