@@ -18,6 +18,15 @@ export default function RootLayout({ children }) {
      crossorigin="anonymous"></script>
        <meta name="ahrefs-site-verification" content="13b3363a4ccedd10fe5ff9fe99d7e5ca0d82894db62e56fbd183fc065503f28c"/>
     <meta name="google-site-verification" content="CP-bBZfPoKzhXDdIAAeb5AvIDbZoMMJToPGRiBTbb00" />
+       <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7E6FNQ81D9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7E6FNQ81D9');
+</script>
     </head>
       <body className={roboto.className}>
         <Header />
