@@ -31,7 +31,9 @@ const Quiz = ({ params }) => {
   const [intervalId, setIntervalId] = useState(null);
 
   // Filter questions based on the selected level
-  const questions = level ? quiz[level].questions : [];
+const questions = level
+    ? quiz.find((q) => q.level === level)?.questions || []
+    : [];
   const { question, choices, correctAnswer } = questions[activeQuestion] || {};
 
   useEffect(() => {
