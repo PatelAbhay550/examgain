@@ -163,7 +163,7 @@ const questions = level
             Select A Quiz to start:
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {Object.keys(quiz).map((level) => (
+            {quiz.map((level) => (
               <button
                 key={level}
                 onClick={() => handleLevelSelect(level)}
