@@ -162,14 +162,14 @@ const questions = level
           <h2 className="text-2xl font-semibold mb-4">
             Select A Quiz to start:
           </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {quiz.map((level) => (
               <button
-                key={level}
-                onClick={() => handleLevelSelect(level)}
+                key={level.level}
+                onClick={() => handleLevelSelect(level.level)}
                 className="bg-blue-600 text-white py-4 rounded-md hover:bg-blue-700"
               >
-                {level.charAt(0).toUpperCase() + level.slice(1)}
+                {level.level}
               </button>
             ))}
           </div>
