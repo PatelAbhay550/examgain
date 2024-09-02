@@ -182,6 +182,12 @@ const QuizComponent = ({ slug }) => {
         </form>
       ) : !showResult ? (
         <div>
+          <div className="mt-6 text-center">
+            <span className="text-lg font-semibold">Time Remaining: </span>
+            <span className="text-lg font-semibold text-red-600">
+              {formatTime(timeRemaining)}
+            </span>
+          </div>
           <div className="flex justify-between items-center mb-4">
             <span className="text-xl font-semibold text-blue-600">
               {addLeadingZero(activeQuestion + 1)}
@@ -229,12 +235,6 @@ const QuizComponent = ({ slug }) => {
               {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
               <FiArrowRight className="inline ml-2" />
             </button>
-          </div>
-          <div className="mt-6 text-center">
-            <span className="text-lg font-semibold">Time Remaining: </span>
-            <span className="text-lg font-semibold text-red-600">
-              {formatTime(timer)}
-            </span>
           </div>
         </div>
       ) : (
