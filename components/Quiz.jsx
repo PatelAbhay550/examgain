@@ -262,7 +262,7 @@ const QuizComponent = ({ slug }) => {
                   className="p-4 border rounded-md bg-red-50 text-red-600"
                 >
                   <p className="font-semibold mb-1">{q.question}</p>
-                  <p>Selected Answer: {q.selectedAnswer}</p>
+                 
                   <p className="mt-2 font-semibold">
                     Correct Answer: {q.correctAnswer}
                   </p>
@@ -280,7 +280,7 @@ const QuizComponent = ({ slug }) => {
                   className="p-4 border rounded-md bg-yellow-50 text-yellow-600"
                 >
                   <p className="font-semibold mb-1">{q.question}</p>
-                  <p>Selected Answer: {q.selectedAnswer}</p>
+                  
                   <p className="mt-2 font-semibold">
                     Correct Answer: {q.correctAnswer}
                   </p>
