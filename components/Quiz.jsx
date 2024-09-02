@@ -250,7 +250,7 @@ const QuizComponent = ({ slug }) => {
           </p>
           <p className="text-xl mb-2">Total Score: {result.score}</p>
           <p className="text-xl mb-2">
-            Time Used: {formatTime(result.timeUsed)}
+          Total Time Used: {formatTime(result.totalTimeUsed)}
           </p>
 
           <div className="incorrect-answers mt-8">
@@ -262,7 +262,7 @@ const QuizComponent = ({ slug }) => {
                   className="p-4 border rounded-md bg-red-50 text-red-600"
                 >
                   <p className="font-semibold mb-1">{q.question}</p>
-                 
+
                   <p className="mt-2 font-semibold">
                     Correct Answer: {q.correctAnswer}
                   </p>
@@ -280,7 +280,7 @@ const QuizComponent = ({ slug }) => {
                   className="p-4 border rounded-md bg-yellow-50 text-yellow-600"
                 >
                   <p className="font-semibold mb-1">{q.question}</p>
-                  
+
                   <p className="mt-2 font-semibold">
                     Correct Answer: {q.correctAnswer}
                   </p>
