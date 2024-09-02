@@ -1,6 +1,6 @@
 "use client";
 import { quiz } from "@/data/questions";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   FiCheckCircle,
   FiXCircle,
@@ -8,7 +8,9 @@ import {
   FiArrowLeft,
   FiArrowRight,
   FiClock,
+  FiDownload,
 } from "react-icons/fi";
+import html2canvas from "html2canvas";
 const QuizComponent = ({ slug }) => {
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answers, setAnswers] = useState([]); // Store user answers
@@ -27,7 +29,7 @@ const QuizComponent = ({ slug }) => {
   });
   const [timeRemaining, setTimeRemaining] = useState(600); // 10 minutes in seconds
   const [startTime, setStartTime] = useState(null);
-
+  const resultRef = useRef();
   // Filter questions based on the selected level
   const questions = level
     ? quiz.find((q) => q.level === level)?.questions || []
@@ -135,7 +137,14 @@ const QuizComponent = ({ slug }) => {
     const secs = seconds % 60;
     return `${addLeadingZero(minutes)}:${addLeadingZero(secs)}`;
   };
-
+  const downloadResultAsImage = async () => {
+    const canvas = await html2canvas(resultRef.current);
+    const dataURL = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = dataURL;
+    link.download = `quiz_result.png`;
+    link.click();
+  };
   const quizDetails = level ? quiz.find((q) => q.level === level) : {};
   return (
     <div className="quiz-container mx-auto md:mt-32 mt-16 mb-52 p-4 max-w-xl">
@@ -238,7 +247,7 @@ const QuizComponent = ({ slug }) => {
           </div>
         </div>
       ) : (
-        <div className="result-summary text-center">
+        <div ref={resultRef} className="result-summary text-center">
           <h2 className="text-2xl font-semibold mb-4">Quiz Results</h2>
           <p className="text-xl mb-2">Name: {userName}</p>
           <p className="text-xl mb-2">Total Questions: {questions.length}</p>
@@ -250,7 +259,7 @@ const QuizComponent = ({ slug }) => {
           </p>
           <p className="text-xl mb-2">Total Score: {result.score}</p>
           <p className="text-xl mb-2">
-          Total Time Used: {formatTime(result.totalTimeUsed)}
+            Total Time Used: {formatTime(result.totalTimeUsed)}
           </p>
 
           <div className="incorrect-answers mt-8">
@@ -288,7 +297,13 @@ const QuizComponent = ({ slug }) => {
               ))}
             </ul>
           </div>
-
+          <button
+            onClick={downloadResultAsImage}
+            className="bg-blue-600 text-white py-2 px-4 rounded-md mt-4 hover:bg-blue-700 flex items-center justify-center"
+          >
+            <FiDownload className="inline mr-2" />
+            Download Result as Image
+          </button>
           <button
             onClick={() => window.location.reload()}
             className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 mt-8"
