@@ -31,7 +31,7 @@ export default async function sitemap() {
       priority: 1,
     },
     {
-      url: "https://examgain.vercel.app/privacy",
+      url: "https://examgain.vercel.app/revision/ssc",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
