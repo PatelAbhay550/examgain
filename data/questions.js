@@ -126,7 +126,7 @@ export const quiz = [
         type: "MCQs",
         correctAnswer: "Gangotri Glacier",
         extradetails:
-          "The Ganges River originates as Bhagirathi river from the Gangotri Glacier in the Himalayas.When Bhagirathi river meets Alaknanda river at Dev Paryag, the combined river s known as Ganga. Its length is 2525km. It is one of the most important rivers in India.",
+          "The Ganges River originates as Bhagirathi river from the Gangotri Glacier in the Himalayas. When Bhagirathi river meets Alaknanda river at Dev Paryag, the combined river is known as Ganga. Its length is 2525km. It is one of the most important rivers in India.",
       },
       {
         question: "Which river is known as 'Sorrow of Bihar'?",
