@@ -110,6 +110,106 @@ export const quiz = [
     ],
   },
   {
+    level: "River System",
+    topic: "SSC CGL",
+    totalQuestions: 10,
+    perQuestionScore: 2,
+    questions: [
+      {
+        question: "The Ganges River originates from which location?",
+        choices: [
+          "Kailash Range",
+          "Yamunotri Glacier",
+          "Gangotri Glacier",
+          "Satopanth Glacier",
+        ],
+        type: "MCQs",
+        correctAnswer: "Gangotri Glacier",
+        extradetails:
+          "The Ganges River originates as Bhagirathi river from the Gangotri Glacier in the Himalayas.When Bhagirathi river meets Alaknanda river at Dev Paryag, the combined river s known as Ganga. Its length is 2525km. It is one of the most important rivers in India.",
+      },
+      {
+        question: "Which river is known as 'Sorrow of Bihar'?",
+        choices: ["Ganges", "Yamuna", "Kosi", "Brahmaputra"],
+        type: "MCQs",
+        correctAnswer: "Kosi",
+        extradetails:
+          "The Kosi River is known as the 'Sorrow of Bihar' due to its frequent flooding, which causes significant damage to the region.",
+      },
+      {
+        question:
+          "The Brahmaputra River is primarily associated with which region?",
+        choices: ["Assam Valley", "Punjab", "Ganges Delta", "Western Ghats"],
+        type: "MCQs",
+        correctAnswer: "Assam Valley",
+        extradetails:
+          "The Brahmaputra River flows through the Assam Valley and is a major river in the northeastern region of India. Brahmaputra river originates from lake Mansarovar in Tibbet where it is called Tsangpo.",
+      },
+      {
+        question: "Which river is the longest in India?",
+        choices: ["Godavari", "Yamuna", "Ganges", "Brahmaputra"],
+        type: "MCQs",
+        correctAnswer: "Godavari",
+        extradetails:
+          "The Godavari River is the longest river in India, flowing across central and southern India.",
+      },
+      {
+        question: "The Yamuna River is a tributary of which major river?",
+        choices: ["Ganges", "Godavari", "Brahmaputra", "Kaveri"],
+        type: "MCQs",
+        correctAnswer: "Ganges",
+        extradetails:
+          "The Yamuna River is a major tributary of the Ganges River and flows through northern India. It originates from Yamunotri Glacier in Uttarakhnad.",
+      },
+      {
+        question:
+          "Which river forms the border between India and Pakistan in the Punjab region?",
+        choices: ["Chenab", "Jhelum", "Ravi", "Sutlej"],
+        type: "MCQs",
+        correctAnswer: "Chenab",
+        extradetails:
+          "The Chenab River forms part of the border between India and Pakistan in the Punjab region.",
+      },
+      {
+        question: "The Narmada River flows into which body of water?",
+        choices: [
+          "Bay of Bengal",
+          "Arabian Sea",
+          "Indian Ocean",
+          "Andaman Sea",
+        ],
+        type: "MCQs",
+        correctAnswer: "Arabian Sea",
+        extradetails:
+          "The Narmada River flows westward and empties into the Arabian Sea.",
+      },
+      {
+        question: "Which river is known as 'Dakshina Ganga'?",
+        choices: ["Krishna", "Kaveri", "Godavari", "Mahanadi"],
+        type: "MCQs",
+        correctAnswer: "Godavari",
+        extradetails:
+          "The Godavari River is often referred to as the 'Dakshina Ganga' or 'Vriddh Ganga' due to its significance in southern India.",
+      },
+      {
+        question: "Which river is the main source of the Indus River?",
+        choices: ["Zanskar", "Jhelum", "Chenab", "Ravi"],
+        type: "MCQs",
+        correctAnswer: "Zanskar",
+        extradetails:
+          "The Zanskar River is one of the main sources of the Indus River, originating from the Tibetan Plateau.",
+      },
+      {
+        question: "Which river is famous for its delta, the Sundarbans?",
+        choices: ["Sabarmati", "Brahmaputra", "Godavari", "Kaveri"],
+        type: "MCQs",
+        correctAnswer: "Brahmaputra",
+        extradetails:
+          "The Brahmaputra River forms the Sundarbans delta, which is known for its rich biodiversity and mangrove forests.",
+      },
+    ],
+  },
+  {
     level: "Quick Revision 01",
     topic: "SSC CGL",
     totalQuestions: 10,
