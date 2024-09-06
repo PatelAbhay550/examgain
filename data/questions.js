@@ -387,7 +387,7 @@ export const quiz = [
     ],
   },
   {
-    level: "Books and Authors 02",
+    level: "Books and Authors 01",
     topic: "SSC CGL",
     totalQuestions: 10,
     perQuestionScore: 2,
