@@ -1,5 +1,19 @@
 import React from "react";
 import Link from "next/link";
+export const metadata = {
+  title: "SSC Quick Revision Questions - Examgain",
+  description:
+    "Prepare for SSC exams with revision questions of India revision questions. Take free SSC mock tests to boost your knowledge of Indian rivers, their origins, tributaries, and the states they flow through and national Parks.",
+  keywords:
+    "National Parks, National Parks in India,River Systems of India, SSC mock tests, SSC revision questions, Indian rivers, Indian geography quiz, SSC exam preparation, River Systems quiz, competitive exam preparation",
+  openGraph: {
+    title: "SSC Quick Revision Questions - Examgain",
+    description:
+      "Prepare for SSC exams with revision questions of India revision questions. Take free SSC mock tests to boost your knowledge of Indian rivers, their origins, tributaries, and the states they flow through and national Parks.",
+    url: "https://examgain.vercel.app/revision/ssc/",
+    type: "article",
+  },
+};
 
 const SSCRevision = () => {
   return (
