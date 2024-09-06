@@ -146,12 +146,12 @@ export const quiz = [
           "The Brahmaputra River flows through the Assam Valley and is a major river in the northeastern region of India. Brahmaputra river originates from lake Mansarovar in Tibbet where it is called Tsangpo.",
       },
       {
-        question: "Which river is the longest in India?",
+        question: "Which river is the longest in Peninsular India?",
         choices: ["Godavari", "Yamuna", "Ganges", "Brahmaputra"],
         type: "MCQs",
         correctAnswer: "Godavari",
         extradetails:
-          "The Godavari River is the longest river in India, flowing across central and southern India.",
+          "The Godavari River is the longest river in Peninsular India, flowing across central and southern India.",
       },
       {
         question: "The Yamuna River is a tributary of which major river?",
