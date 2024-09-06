@@ -42,6 +42,12 @@ export default async function sitemap() {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: "https://examgain.vercel.app/revison/ssc/river-system-of-india",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
   ];
 
   const questionUrls = suggestions.map((item) => ({
