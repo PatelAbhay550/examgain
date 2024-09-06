@@ -27,7 +27,7 @@ export const Resources = () => {
           icon: AiOutlineQuestionCircle,
           title: "Questions",
           description: "Access SSC practice questions with solutions.",
-          link: "/category/ssc",
+          link: "/revision/ssc",
         },
       ],
     },
