@@ -107,7 +107,7 @@ const NationalParks = () => {
         {data.questions.map((question, index) => (
           <li
             key={index}
-            className="bg-blue-50 p-6 rounded-lg shadow-md hover:bg-blue-100 transition duration-300"
+            className="bg-blue-50 p-6 rounded-lg shadow-md hover:bg-blue-50 transition duration-300"
           >
             <p className="font-semibold text-blue-800">{question.question}</p>
             <ul className="mt-4 space-y-2">
@@ -128,6 +128,12 @@ const NationalParks = () => {
               Correct Answer:{" "}
               <span className="font-semibold text-blue-800">
                 {question.correctAnswer}
+              </span>
+            </p>
+            <p className="mt-4 text-sm text-blue-600">
+              Explaination:{" "}
+              <span className="font-semibold text-blue-800">
+                {question.extradetails}
               </span>
             </p>
           </li>
