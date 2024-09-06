@@ -7,21 +7,27 @@ export const quiz = [
     questions: [
       {
         question: "Tadoba national is located in",
-        choices: ["Maharastra", "Uttar Pradesh", "Tamil Nadu", "Uttarakhand"],
+        choices: ["Maharastra", "Uttar Prasesh", "Tamil Nadu", "Uttarakhand"],
         type: "MCQs",
         correctAnswer: "Maharastra",
+        extradetails:
+          "  Tadoba National Park is located in Chandrapur district of Maharastra. It is the largest park of Maharastra, and oldest National Park.",
       },
       {
         question: "The Silent Valley National Park is in",
         choices: ["Uttarakhand", "Odisha", "Himachal Pradesh", "Kerala"],
         type: "MCQs",
         correctAnswer: "Kerala",
+        extradetails:
+          "Silent Valley National Park is located in the Nilgiri Hills in Kerala, India. It was established on 15 November 1984.",
       },
       {
         question: "The Pin Valley National Park is located in",
         choices: ["Uttarakhand", "Odisha", "Himachal Pradesh", "Kerala"],
         type: "MCQs",
         correctAnswer: "Himachal Pradesh",
+        extradetails:
+          "Pin Valley National Park is located in Lahaul and Spiti district of Himachal Pradesh. It is famous for endangered Snow leopards. Pin Valley National Park was established in 1958.",
       },
       {
         question:
@@ -34,12 +40,16 @@ export const quiz = [
         ],
         type: "MCQs",
         correctAnswer: "Dudhwa National Park",
+        extradetails:
+          "Dudhwa National Park is located in Uttar Pradesh's Kheri and Lakhimpur Districts. It was established in 1977 as a part of Dushwa Tiger reserve.",
       },
       {
         question: "Sariska National Park is located in",
         choices: ["Maharastra", "Odisha", "Manipur", "Rajasthan"],
         type: "MCQs",
         correctAnswer: "Rajasthan",
+        extradetails:
+          "Sariska Tiger Reserve is a National Park located in Alwar District of Rajasthan.",
       },
       {
         question: "Identify the National Park located in Jammu and Kashmir",
@@ -51,6 +61,8 @@ export const quiz = [
         ],
         type: "MCQs",
         correctAnswer: "Salim Ali National Park",
+        extradetails:
+          "Salim Ali national Park is located in Srinagar, Jammu and Kashmir. Salim ali national Park is also known as City forest national park. It is named after Indian Ornithologist and Bird-Lover Salim Ali.",
       },
       {
         question:
@@ -58,12 +70,16 @@ export const quiz = [
         choices: ["Arunachal Padesh", "Uttarakhand", "Laddakh", "Assam"],
         type: "MCQs",
         correctAnswer: "Laddakh",
+        extradetails:
+          "Hemis national Park, located in Leh District of Laddakh is the largest National Park of India. Hemis National Park is famous for Snow leopards and was established in 1981.",
       },
       {
         question: "Kuchenjuga National Park is located in",
         choices: ["Maharastra", "Sikkim", "Manipur", "Assam"],
         type: "MCQs",
         correctAnswer: "Sikkim",
+        extradetails:
+          "Kunchenjunga national park is located in Sikkim. It is also called Kunchenjunga Biosphere Reserve. It is the first Mixed Heritage site in UNESCO World Heritage sites list. Kunchenjunga National Park was established in 1977.",
       },
       {
         question: "National Park located in Uttarakhand is",
@@ -75,6 +91,8 @@ export const quiz = [
         ],
         type: "MCQs",
         correctAnswer: "Nanda Devi National Park",
+        extradetails:
+          "Nanda Devi National Park is located in Chamoli Garhwal district of Uttarakhand. Nanda Devi National Park was Established in 1982.",
       },
       {
         question: "Largest National Park in Madhya Pradesh is",
@@ -86,6 +104,8 @@ export const quiz = [
         ],
         type: "MCQs",
         correctAnswer: "Kanha Tiger Reserve",
+        extradetails:
+          "Kanha Tiger reserve is a national Park located in Madhya Pradesh. It has Tigers, jackals, and wild pigs. It was established in 1955",
       },
     ],
   },
