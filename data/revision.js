@@ -207,6 +207,48 @@ export const revision = [
         extradetails:
           "The Brahmaputra River forms the Sundarbans delta, which is known for its rich biodiversity and mangrove forests.",
       },
+      {
+        question: "Which river is known as the 'Lifeline of Sikkim'?",
+        choices: ["Krishna", "Godavari", "Cauvery", "Teesta"],
+        type: "MCQs",
+        correctAnswer: "Teesta",
+        extradetails: "The Cauvery River is often referred to as the 'Lifeline of Sikkim' due to its importance in providing water for irrigation and drinking purposes in the region."
+      },
+    {
+      question: "Which river is known as the 'Sorrow of Bengal'?",
+      choices: ["Brahmaputra", "Indus", "Yangtze", "Damodar"],
+      type: "MCQs",
+      correctAnswer: "Damodar",
+      extradetails: "The Damodar is often referred to as the 'Sorrow of Bengal' due to its history of devastating floods."
+    },
+    {
+      question: "Which river is the longest in Africa?",
+      choices: ["Nile", "Congo", "Niger", "Zambezi"],
+      type: "MCQs",
+      correctAnswer: "Nile",
+      extradetails: "The Nile River is the longest river in Africa, flowing through multiple countries including Egypt, Sudan, and Uganda."
+    },
+    {
+      question: "Which river is known as the 'Yellow River'?",
+      choices: ["Yangtze", "Mekong", "Ganges", "Huang He"],
+      type: "MCQs",
+      correctAnswer: "Huang He",
+      extradetails: "The Huang He, also known as the Yellow River, is the second-longest river in China and is named after the yellowish-brown sediment it carries."
+    },
+    {
+      question: "Which river is known as the 'Sorrow of Bihar'?",
+      choices: ["Kosi", "Son", "Yamuna", "Tungabhadra"],
+      type: "MCQs",
+      correctAnswer: "Kosi",
+      extradetails: "The Kosi River is often referred to as the 'Sorrow of Bihar' due to the floods caused by river in parts of Bihar."
+    },
+    {
+      question: "Which river is known as the 'River of Kings'?",
+      choices: ["Thames", "Seine", "Danube", "Chao Phraya"],
+      type: "MCQs",
+      correctAnswer: "Chao Phraya",
+      extradetails: "The Chao Phraya River in Thailand is often called the 'River of Kings' due to its historical and cultural significance to the country."
+    }
     ],
   },
   {
