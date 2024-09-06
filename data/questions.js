@@ -7,7 +7,7 @@ export const quiz = [
     questions: [
       {
         question: "Tadoba national is located in",
-        choices: ["Maharastra", "Uttar Prasesh", "Tamil Nadu", "Uttarakhand"],
+        choices: ["Maharastra", "Uttar Pradesh", "Tamil Nadu", "Uttarakhand"],
         type: "MCQs",
         correctAnswer: "Maharastra",
       },
