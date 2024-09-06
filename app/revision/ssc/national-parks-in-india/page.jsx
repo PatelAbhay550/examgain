@@ -1,4 +1,4 @@
-import { quiz } from "@/data/questions";
+import { revision } from "@/data/revision";
 import React from "react";
 
 export const metadata = {
@@ -18,7 +18,7 @@ export const metadata = {
 
 const NationalParks = () => {
   // Find the specific quiz data related to National Parks
-  const data = quiz.find((q) => q.level === "National Parks");
+   const data = revision.find((q) => q.level === "National Parks");
 
   if (!data) {
     return <div>No data available for National Parks</div>;
