@@ -36,6 +36,12 @@ export default async function sitemap() {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: "https://examgain.vercel.app/revison/ssc/national-parks-in-india",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 
   const questionUrls = suggestions.map((item) => ({
