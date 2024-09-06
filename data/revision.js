@@ -107,6 +107,76 @@ export const revision = [
         extradetails:
           "Kanha Tiger reserve is a national Park located in Madhya Pradesh. It has Tigers, jackals, and wild pigs. It was established in 1955",
       },
+      {
+        question:
+          "Which national park is known for its population of Bengal Tigers?",
+        choices: [
+          "Jim Corbett National Park",
+          "The Sundarbans National Park",
+          "Periyar National Park",
+          "Ranthambore National Park",
+        ],
+        type: "MCQs",
+        correctAnswer: "The Sundarbans National Park",
+        extradetails:
+          "The Sundarbans National Park, located in West Bengal, is known for its population of Bengal Tigers and is a popular tourist destination.",
+      },
+      {
+        question:
+          "Which national park is home to the Great Indian One-Horned Rhinoceros?",
+        choices: [
+          "Sundarbans National Park",
+          "Bandhavgarh National Park",
+          "Kanha National Park",
+          "Kaziranga National Park",
+        ],
+        type: "MCQs",
+        correctAnswer: "Kaziranga National Park",
+        extradetails:
+          "Kaziranga National Park, located in Assam, is famous for its population of the Great Indian One-Horned Rhinoceros and is a UNESCO World Heritage Site.",
+      },
+      {
+        question:
+          "Which national park is known for its population of Asiatic Lions?",
+        choices: [
+          "Gir National Park",
+          "Sundarbans National Park",
+          "Bandipur National Park",
+          "Hemis National Park",
+        ],
+        type: "MCQs",
+        correctAnswer: "Gir National Park",
+        extradetails:
+          "Gir National Park, located in Gujarat, is the only place in the world where Asiatic Lions are found in the wild.",
+      },
+      {
+        question:
+          "Which national park is known for its population of Indian Elephants?",
+        choices: [
+          "Bandipur National Park",
+          "Jim Corbett National Park",
+          "Periyar National Park",
+          "Sundarbans National Park",
+        ],
+        type: "MCQs",
+        correctAnswer: "Bandipur National Park",
+        extradetails:
+          "Bandipur National Park, located in Karnataka, is known for its population of Indian Elephants and is a popular wildlife destination.",
+      },
+      {
+        question:
+          "Which national park is known for its population of Snow Leopards?",
+        choices: [
+          "Hemis National Park",
+          "Kaziranga National Park",
+          "Ranthambore National Park",
+          "Jim Corbett National Park",
+        ],
+        type: "MCQs",
+        correctAnswer: "Hemis National Park",
+        extradetails:
+          "Hemis National Park, located in Ladakh, is known for its population of Snow Leopards and is the largest national park in India.",
+      },
     ],
   },
   {
@@ -212,43 +282,49 @@ export const revision = [
         choices: ["Krishna", "Godavari", "Cauvery", "Teesta"],
         type: "MCQs",
         correctAnswer: "Teesta",
-        extradetails: "The Cauvery River is often referred to as the 'Lifeline of Sikkim' due to its importance in providing water for irrigation and drinking purposes in the region."
+        extradetails:
+          "The Cauvery River is often referred to as the 'Lifeline of Sikkim' due to its importance in providing water for irrigation and drinking purposes in the region.",
       },
-    {
-      question: "Which river is known as the 'Sorrow of Bengal'?",
-      choices: ["Brahmaputra", "Indus", "Yangtze", "Damodar"],
-      type: "MCQs",
-      correctAnswer: "Damodar",
-      extradetails: "The Damodar is often referred to as the 'Sorrow of Bengal' due to its history of devastating floods."
-    },
-    {
-      question: "Which river is the longest in Africa?",
-      choices: ["Nile", "Congo", "Niger", "Zambezi"],
-      type: "MCQs",
-      correctAnswer: "Nile",
-      extradetails: "The Nile River is the longest river in Africa, flowing through multiple countries including Egypt, Sudan, and Uganda."
-    },
-    {
-      question: "Which river is known as the 'Yellow River'?",
-      choices: ["Yangtze", "Mekong", "Ganges", "Huang He"],
-      type: "MCQs",
-      correctAnswer: "Huang He",
-      extradetails: "The Huang He, also known as the Yellow River, is the second-longest river in China and is named after the yellowish-brown sediment it carries."
-    },
-    {
-      question: "Which river is known as the 'Sorrow of Bihar'?",
-      choices: ["Kosi", "Son", "Yamuna", "Tungabhadra"],
-      type: "MCQs",
-      correctAnswer: "Kosi",
-      extradetails: "The Kosi River is often referred to as the 'Sorrow of Bihar' due to the floods caused by river in parts of Bihar."
-    },
-    {
-      question: "Which river is known as the 'River of Kings'?",
-      choices: ["Thames", "Seine", "Danube", "Chao Phraya"],
-      type: "MCQs",
-      correctAnswer: "Chao Phraya",
-      extradetails: "The Chao Phraya River in Thailand is often called the 'River of Kings' due to its historical and cultural significance to the country."
-    }
+      {
+        question: "Which river is known as the 'Sorrow of Bengal'?",
+        choices: ["Brahmaputra", "Indus", "Yangtze", "Damodar"],
+        type: "MCQs",
+        correctAnswer: "Damodar",
+        extradetails:
+          "The Damodar is often referred to as the 'Sorrow of Bengal' due to its history of devastating floods.",
+      },
+      {
+        question: "Which river is the longest in Africa?",
+        choices: ["Nile", "Congo", "Niger", "Zambezi"],
+        type: "MCQs",
+        correctAnswer: "Nile",
+        extradetails:
+          "The Nile River is the longest river in Africa, flowing through multiple countries including Egypt, Sudan, and Uganda.",
+      },
+      {
+        question: "Which river is known as the 'Yellow River'?",
+        choices: ["Yangtze", "Mekong", "Ganges", "Huang He"],
+        type: "MCQs",
+        correctAnswer: "Huang He",
+        extradetails:
+          "The Huang He, also known as the Yellow River, is the second-longest river in China and is named after the yellowish-brown sediment it carries.",
+      },
+      {
+        question: "Which river is known as the 'Sorrow of Bihar'?",
+        choices: ["Kosi", "Son", "Yamuna", "Tungabhadra"],
+        type: "MCQs",
+        correctAnswer: "Kosi",
+        extradetails:
+          "The Kosi River is often referred to as the 'Sorrow of Bihar' due to the floods caused by river in parts of Bihar.",
+      },
+      {
+        question: "Which river is known as the 'River of Kings'?",
+        choices: ["Thames", "Seine", "Danube", "Chao Phraya"],
+        type: "MCQs",
+        correctAnswer: "Chao Phraya",
+        extradetails:
+          "The Chao Phraya River in Thailand is often called the 'River of Kings' due to its historical and cultural significance to the country.",
+      },
     ],
   },
   {
