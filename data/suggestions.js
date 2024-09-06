@@ -387,6 +387,6 @@ export const suggestions = [
         "question": "The Silent Valley National Park is in",
         "answer": "Kerala </br>Silent Valley National Park is located in the Nilgiri Hills in Kerala, India. It was established on 15 November 1984.",
         "tags":["kerala","silent valley","national parks india","ssc"],
-        "slug":"silent-valley-national-park-is-located-in:
+        "slug":"silent-valley-national-park-is-located-in"
       }, 
 ];
