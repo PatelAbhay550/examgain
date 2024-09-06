@@ -382,12 +382,11 @@ export const suggestions = [
   "answer": "<p>Given sequence:</p>\n<ul>\n  <li>C22D,</li>\n  <li>_</li>\n  <li>C6D4,</li>\n  <li>C58D,</li>\n  <li>C106D</li>\n</ul>\n<h3>Observations:</h3>\n<ol>\n  <li><strong>Prefix and Suffix:</strong> The prefix \"C\" and the suffix \"D\" are consistent across all elements in the sequence, so the variations occur in the middle numbers.</li>\n  <li><strong>Middle Numbers Analysis:</strong>\n    <ul>\n      <li><strong>22 → _ → 6 → 58 → 106:</strong> The middle numbers do not follow a simple arithmetic or geometric progression. However, considering potential patterns, transformations, or combinations may help.</li>\n    </ul>\n  </li>\n</ol>\n<h3>Options Analysis:</h3>\n<ul>\n  <li>C43D</li>\n  <li>C2C3D</li>\n  <li>CCD7</li>\n  <li>C2C2D</li>\n</ul>\n<h3>Logical Deduction:</h3>\n<p>Considering the structure of the options, <strong>C2C2D</strong> appears to align best with the established pattern \"C(number/letter)D.\" The other options introduce additional characters that deviate from this format.</p>\n<h3>Conclusion:</h3>\n<p>The missing pattern is likely <strong>C2C2D</strong>.</p>",
   "tags": ["ssc","upp", "reasoning", "find missing pattern"],
   "slug": "find-missing-pattern-upp"
-}
-
-
-
-
-
-
- 
+},
+{
+        "question": "The Silent Valley National Park is in",
+        "answer": "Kerala </br>Silent Valley National Park is located in the Nilgiri Hills in Kerala, India. It was established on 15 November 1984.",
+        "tags":["kerala","silent valley","national parks india","ssc"],
+        "slug":"silent-valley-national-park-is-located-in:
+      }, 
 ];
