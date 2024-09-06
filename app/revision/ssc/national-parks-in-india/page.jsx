@@ -23,9 +23,76 @@ const NationalParks = () => {
   if (!data) {
     return <div>No data available for National Parks</div>;
   }
+  // Structured Data JSON-LD for FAQ, Article, and Breadcrumbs
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are the most important National Parks in India for SSC exams?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Key National Parks include Jim Corbett, Ranthambore, Kaziranga, Sundarbans, Gir, Bandipur, and Kanha.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why are National Parks important for SSC exam preparation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "National Parks are frequently asked in SSC exams due to their significance in Indian geography and biodiversity.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How can I remember the locations of National Parks in India?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Use mnemonics or associate parks with the states they are located in. For example, 'Jim Corbett' is in Uttarakhand.",
+        },
+      },
+    ],
+  };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "National Parks in India | SSC Mock Tests and Revision Questions",
+    description:
+      "Prepare for SSC exams with these National Parks in India revision questions. Take free SSC mock tests to boost your knowledge and ace your exam preparation.",
+    author: {
+      "@type": "Person",
+      name: "Abhay Patel",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Examgain",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://examgain.vercel.app/favicon.ico",
+      },
+    },
+    datePublished: "2024-09-06",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://examgain.vercel.app/revision/ssc/national-parks-in-india",
+    },
+  };
   return (
     <div className="pt-28 px-4 md:px-8 lg:px-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
       <h1 className="text-3xl font-bold text-blue-700 mb-8 text-center">
         National Parks in India | SSC Mock Tests and Revision Questions
       </h1>
