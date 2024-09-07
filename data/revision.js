@@ -637,6 +637,91 @@ export const revision = [
         extradetails:
           "The President of India can be removed from office by a process of impeachment initiated by the Parliament, if he/she is found guilty of violating the Constitution.",
       },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Life and Personal Liberty?",
+        choices: ["Article 14", "Article 19", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 21",
+        extradetails:
+          "Article 21 of the Indian Constitution guarantees the Right to Life and Personal Liberty, which includes the right to live with dignity and freedom from arbitrary arrest or detention.",
+      },
+      {
+        question:
+          "Which amendment to the Indian Constitution introduced the Right to Information as a fundamental right?",
+        choices: [
+          "42nd Amendment",
+          "44th Amendment",
+          "86th Amendment",
+          "93rd Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "93rd Amendment",
+        extradetails:
+          "The 93rd Amendment to the Indian Constitution, passed in 2005, introduced the Right to Information as a fundamental right under Article 19(1)(a).",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Freedom of Religion?",
+        choices: ["Article 14", "Article 19", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 25",
+        extradetails:
+          "Article 25 of the Indian Constitution guarantees the Right to Freedom of Religion, which includes the freedom to profess, practice, and propagate one's religion.",
+      },
+      {
+        question: "Who has the power to appoint the Prime Minister of India?",
+        choices: ["President", "Vice President", "Supreme Court", "Parliament"],
+        type: "MCQs",
+        correctAnswer: "President",
+        extradetails:
+          "The President of India has the power to appoint the Prime Minister of India, who is usually the leader of the majority party in the Lok Sabha.",
+      },
+      {
+        question:
+          "Which amendment to the Indian Constitution introduced the Right to Education as a fundamental right?",
+        choices: [
+          "42nd Amendment",
+          "44th Amendment",
+          "86th Amendment",
+          "93rd Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "86th Amendment",
+        extradetails:
+          "The 86th Amendment to the Indian Constitution, passed in 2002, introduced the Right to Education as a fundamental right under Article 21A.",
+      },
+      {
+        question:
+          "Which amendment to the Indian Constitution introduced the Right to Property as a legal right?",
+        choices: [
+          "42nd Amendment",
+          "44th Amendment",
+          "86th Amendment",
+          "36th Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "44th Amendment",
+        extradetails:
+          "The 44th Amendment to the Indian Constitution, passed in 1978, removed the Right to Property as a fundamental right and made it a legal right.",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Freedom of Speech and Expression?",
+        choices: ["Article 14", "Article 19(1)(a)", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 19(1)(a)",
+        extradetails:
+          "Article 19(1)(a) of the Indian Constitution guarantees the Right to Freedom of Speech and Expression, which includes the freedom to express one's opinions, beliefs, and ideas.",
+      },
+
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Life and Personal Liberty?",
+        choices: ["Article 14", "Article 19", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 21",
+      },
     ],
   },
 ];
