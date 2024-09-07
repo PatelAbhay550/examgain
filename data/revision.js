@@ -179,6 +179,7 @@ export const revision = [
       },
     ],
   },
+
   {
     level: "River System",
     topic: "SSC CGL",
@@ -501,6 +502,140 @@ export const revision = [
         choices: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
         type: "MCQs",
         correctAnswer: "Vitamin C",
+      },
+    ],
+  },
+  {
+    level: "Constitution of India",
+    topic: "SSC CGL",
+    totalQuestions: 10,
+    perQuestionScore: 2,
+    questions: [
+      {
+        question: "Who is known as the 'Architect of the Indian Constitution'?",
+        choices: [
+          "B.R. Ambedkar",
+          "Jawaharlal Nehru",
+          "Mahatma Gandhi",
+          "Sardar Vallabhbhai Patel",
+        ],
+        type: "MCQs",
+        correctAnswer: "B.R. Ambedkar",
+        extradetails:
+          "B.R. Ambedkar is known as the 'Architect of the Indian Constitution' for his pivotal role in drafting and shaping the Constitution of India.",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Equality?",
+        choices: ["Article 14", "Article 19", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 14",
+        extradetails:
+          "Article 14 of the Indian Constitution guarantees the Right to Equality, which includes equality before the law and equal protection of the law for all individuals.",
+      },
+      {
+        question: "Who has the power to amend the Indian Constitution?",
+        choices: ["Parliament", "President", "Supreme Court", "Prime Minister"],
+        type: "MCQs",
+        correctAnswer: "Parliament",
+        extradetails:
+          "The power to amend the Indian Constitution lies with the Parliament, which consists of the President, the Rajya Sabha (Council of States), and the Lok Sabha (House of the People).",
+      },
+      {
+        question:
+          "Which fundamental right is considered the 'Heart and Soul' of the Indian Constitution?",
+        choices: [
+          "Right to Freedom of Speech and Expression",
+          "Right to Equality",
+          "Right to Life and Personal Liberty",
+          "Right to Constitutional Remedies",
+        ],
+        type: "MCQs",
+        correctAnswer: "Right to Constitutional Remedies",
+        extradetails:
+          "The Right to Constitutional Remedies (Article 32) is considered the 'Heart and Soul' of the Indian Constitution as it provides individuals with the right to move the Supreme Court for the enforcement of their fundamental rights.",
+      },
+      {
+        question: "Who appoints the Chief Justice of India?",
+        choices: [
+          "President",
+          "Prime Minister",
+          "Supreme Court Judges",
+          "Chief Justice of India",
+        ],
+        type: "MCQs",
+        correctAnswer: "President",
+        extradetails:
+          "The Chief Justice of India is appointed by the President of India, in consultation with the other judges of the Supreme Court and the High Courts.",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Education?",
+        choices: ["Article 14", "Article 19", "Article 21A", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 21A",
+        extradetails:
+          "Article 21A of the Indian Constitution guarantees the Right to Education, which ensures free and compulsory education for children between the ages of 6 and 14 years.",
+      },
+      {
+        question:
+          "Who has the power to declare a law unconstitutional in India?",
+        choices: ["President", "Prime Minister", "Supreme Court", "Parliament"],
+        type: "MCQs",
+        correctAnswer: "Supreme Court",
+        extradetails:
+          "The Supreme Court of India has the power to declare a law unconstitutional if it violates any provision of the Indian Constitution.",
+      },
+      {
+        question:
+          "Which amendment to the Indian Constitution introduced the Right to Education as a fundamental right?",
+        choices: [
+          "42nd Amendment",
+          "44th Amendment",
+          "86th Amendment",
+          "93rd Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "86th Amendment",
+        extradetails:
+          "The 86th Amendment to the Indian Constitution, passed in 2002, introduced the Right to Education as a fundamental right under Article 21A.",
+      },
+      {
+        question:
+          "Which amendment to the Indian Constitution introduced the Right to Property as a legal right?",
+        choices: [
+          "42nd Amendment",
+          "44th Amendment",
+          "86th Amendment",
+          "36th Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "44th Amendment",
+        extradetails:
+          "The 44th Amendment to the Indian Constitution, passed in 1978, removed the Right to Property as a fundamental right and made it a legal right.",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Freedom of Speech and Expression?",
+        choices: ["Article 14", "Article 19(1)(a)", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 19(1)(a)",
+        extradetails:
+          "Article 19(1)(a) of the Indian Constitution guarantees the Right to Freedom of Speech and Expression, which includes the freedom to express one's opinions, beliefs, and ideas.",
+      },
+      {
+        question:
+          "Who has the power to remove the President of India from office?",
+        choices: [
+          "Prime Minister",
+          "Supreme Court",
+          "Parliament",
+          "Chief Justice of India",
+        ],
+        type: "MCQs",
+        correctAnswer: "Parliament",
+        extradetails:
+          "The President of India can be removed from office by a process of impeachment initiated by the Parliament, if he/she is found guilty of violating the Constitution.",
       },
     ],
   },
