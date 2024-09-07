@@ -55,6 +55,23 @@ const SSCRevision = () => {
             </Link>
           </div>
         </div>
+        <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+          <div className="p-6">
+            <h2 className="text-xl font-semibold mb-4">
+              Constitution of India Important Questions
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Test your knowledge about Indian Constitution with this quiz. It
+              includes questions on important articles, schedules, and
+              amendments.
+            </p>
+            <Link href="/revision/ssc/indian-constitution-important-questions">
+              <p className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                Quick Revision
+              </p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
