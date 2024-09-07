@@ -587,4 +587,115 @@ export const quiz = [
       },
     ],
   },
+  {
+    level: "Indian Constitution 01",
+    topic: "SSC CGL",
+    totalQuestions: 10,
+    perQuestionScore: 2,
+    questions: [
+      {
+        question: "Who is known as the 'Father of the Indian Constitution'?",
+        choices: [
+          "B.R. Ambedkar",
+          "Jawaharlal Nehru",
+          "Mahatma Gandhi",
+          "Sardar Vallabhbhai Patel",
+        ],
+        type: "MCQs",
+        correctAnswer: "B.R. Ambedkar",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Equality?",
+        choices: ["Article 14", "Article 19", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 14",
+      },
+      {
+        question:
+          "Which amendment of the Indian Constitution introduced the Anti-Defection Law?",
+        choices: [
+          "52nd Amendment",
+          "61st Amendment",
+          "73rd Amendment",
+          "91st Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "52nd Amendment",
+      },
+      {
+        question:
+          "Who has the power to remove the President of India from office?",
+        choices: [
+          "Parliament",
+          "Supreme Court",
+          "Prime Minister",
+          "Election Commission",
+        ],
+        type: "MCQs",
+        correctAnswer: "Parliament",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Freedom of Speech and Expression?",
+        choices: ["Article 14", "Article 19", "Article 21", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 19",
+      },
+      {
+        question: "Who appoints the Chief Justice of India?",
+        choices: [
+          "President of India",
+          "Prime Minister",
+          "Supreme Court Judges",
+          "Chief Justice of India",
+        ],
+        type: "MCQs",
+        correctAnswer: "President of India",
+      },
+      {
+        question:
+          "Which amendment of the Indian Constitution lowered the voting age from 21 to 18 years?",
+        choices: [
+          "42nd Amendment",
+          "44th Amendment",
+          "61st Amendment",
+          "73rd Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "61st Amendment",
+      },
+      {
+        question:
+          "Which article of the Indian Constitution deals with the Right to Education?",
+        choices: ["Article 14", "Article 19", "Article 21A", "Article 25"],
+        type: "MCQs",
+        correctAnswer: "Article 21A",
+      },
+      {
+        question:
+          "Who has the power to declare a law passed by the Parliament as unconstitutional?",
+        choices: [
+          "President of India",
+          "Prime Minister",
+          "Supreme Court",
+          "Election Commission",
+        ],
+        type: "MCQs",
+        correctAnswer: "Supreme Court",
+      },
+      {
+        question:
+          "Which amendment of the Indian Constitution introduced the reservation for Other Backward Classes (OBCs)?",
+        choices: [
+          "42nd Amendment",
+          "44th Amendment",
+          "73rd Amendment",
+          "93rd Amendment",
+        ],
+        type: "MCQs",
+        correctAnswer: "93rd Amendment",
+      },
+    ],
+  },
 ];
