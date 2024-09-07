@@ -48,6 +48,12 @@ export default async function sitemap() {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: "https://examgain.vercel.app/revision/ssc/indian-constitution-important-questions",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
   ];
 
   const questionUrls = suggestions.map((item) => ({
