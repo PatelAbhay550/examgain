@@ -21,7 +21,7 @@ const page = () => {
         Class 12 Notes and Prepration Material - Examgain
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* National Parks Card */}
+        {/* electric charges card */}
         <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
           <div className="p-6">
             <h2 className="text-xl font-semibold mb-4">
@@ -32,6 +32,23 @@ const page = () => {
               Download PDFs, images, and practice questions for free.
             </p>
             <Link href="/revision/class12/electricchargesandfields">
+              <p className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                Get Notes For Free
+              </p>
+            </Link>
+          </div>
+        </div>
+        {/* electric charges card */}
+        <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+          <div className="p-6">
+            <h2 className="text-xl font-semibold mb-4">
+              Amines free Pdf Notes
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Get free notes of Amines for class 12. Download PDFs, images, and
+              practice questions for free.
+            </p>
+            <Link href="/revision/class12/aminesnotes">
               <p className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
                 Get Notes For Free
               </p>
