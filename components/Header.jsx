@@ -7,6 +7,7 @@ const Header = () => {
     { href: "/", text: "Search" },
     { href: "/guides", text: "SSC Guide" },
     { href: "/revision/ssc", text: "SSC Revision" },
+    { href: "/revision/class12", text: "Class 12 Notes" },
   ];
 
   const path = usePathname();
