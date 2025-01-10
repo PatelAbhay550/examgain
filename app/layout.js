@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           }}
         />
         {/* End Google Tag Manager */}
-        
+        <meta name="msvalidate.01" content="6A9D5FD68DD06639D306A3E519DD967E" />
         <meta name="ahrefs-site-verification" content="13b3363a4ccedd10fe5ff9fe99d7e5ca0d82894db62e56fbd183fc065503f28c" />
         <meta name="google-site-verification" content="CP-bBZfPoKzhXDdIAAeb5AvIDbZoMMJToPGRiBTbb00" />
         
