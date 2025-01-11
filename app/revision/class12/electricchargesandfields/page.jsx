@@ -19,7 +19,7 @@ const markdown = `
 ## Electric Charges and Fields Notes Class 12 CBSE
 Are you preparing for the  **Class 12 CBSE Board Exams**? 
 The chapter on **Electric Charges and Fields** is fundamental, as it forms the basis for many advanced topics in physics. To help you excel, we've compiled well-structured, concise, and high-quality notes in **PDF and image formats**.
-## Image Format![](https://firebasestorage.googleapis.com/v0/b/newz-60631.appspot.com/o/cvibq_image.png?alt=media&token=621d1cfe-4e03-4a27-8bd6-aef51ae57564)![](https://firebasestorage.googleapis.com/v0/b/newz-60631.appspot.com/o/wmg3u_image.png?alt=media&token=8a86ce75-5a20-4177-8749-f2c9e45cb745)
+## Image Format![Class 12 Electric charges](https://firebasestorage.googleapis.com/v0/b/newz-60631.appspot.com/o/cvibq_image.png?alt=media&token=621d1cfe-4e03-4a27-8bd6-aef51ae57564)![class 12 electric charges](https://firebasestorage.googleapis.com/v0/b/newz-60631.appspot.com/o/wmg3u_image.png?alt=media&token=8a86ce75-5a20-4177-8749-f2c9e45cb745)
 ## PDF Download
 [Click to Download Pdf](https://www.dropbox.com/scl/fi/2itihys35m0tzacyw2uoj/ec1.pdf?rlkey=8pel03mvur4aqqrzproehacd9&st=55558k9l&dl=0)
 
