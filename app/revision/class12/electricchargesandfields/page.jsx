@@ -3,13 +3,13 @@ import remarkGfm from "remark-gfm";
 export const metadata = {
   title: "Electric Charges and Fields Notes Class 12 CBSE",
   description:
-    "Prepare for the Class 12 CBSE Board Exams with well-structured, concise, and high-quality notes in PDF and image formats on Electric Charges and Fields. Download now!",
+    "Prepare for the Class 12 CBSE Board Exams with well-structured, concise, and high-quality notes.",
   keywords:
     "Electric Charges cbse class 12 notes, Electric Fields class 12 pdf, Class 12 pdf notes, Physics class 12 notes, CBSE class 12 physics tags, Notes, Chapter 1 Electriccharges and fields",
   openGraph: {
     title: "Electric Charges and Fields Notes Class 12 CBSE",
     description:
-      "Prepare for the Class 12 CBSE Board Exams with well-structured, concise, and high-quality notes in PDF and image formats on Electric Charges and Fields. Download now!",
+      "Prepare for the Class 12 CBSE Board Exams with well-structured, concise, and high-quality notes.",
     url: "https://examgain.vercel.app/revision/class12/electricchargesandfields",
     type: "article",
   },
