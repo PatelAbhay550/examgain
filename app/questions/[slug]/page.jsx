@@ -1,5 +1,5 @@
 import { suggestions } from "@/data/suggestions";
-import React from "react";
+
 
 export async function generateStaticParams() {
   return suggestions.map((item) => ({
