@@ -1,5 +1,5 @@
 export const suggestions = [
-  // Easy Level
+
   {
     question: "What is the official language of India?",
     answer:
