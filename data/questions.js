@@ -698,4 +698,83 @@ export const quiz = [
       },
     ],
   },
+  {
+    "level": "History Questions 01 | RRB NTPC",
+    "topic": "RRB NTPC",
+    "totalQuestions": 10,
+    "perQuestionScore": 2,
+    "questions": [
+      {
+        "question": "Who was the founder of the Maurya Empire?",
+        "choices": ["Ashoka", "Bindusara", "Chandragupta Maurya", "Harsha"],
+        "type": "MCQs",
+        "correctAnswer": "Chandragupta Maurya",
+        "extradetails": "Chandragupta Maurya established the Maurya Empire in 321 BCE with the help of Chanakya."
+      },
+      {
+        "question": "Which Mughal emperor is known for his policy of religious tolerance?",
+        "choices": ["Babur", "Aurangzeb", "Akbar", "Jahangir"],
+        "type": "MCQs",
+        "correctAnswer": "Akbar",
+        "extradetails": "Akbar introduced the policy of Sulh-i-Kul (universal tolerance) and abolished the jizya tax on non-Muslims."
+      },
+      {
+        "question": "Who was the first Governor-General of India?",
+        "choices": ["Lord Dalhousie", "Lord Curzon", "Warren Hastings", "Lord Mountbatten"],
+        "type": "MCQs",
+        "correctAnswer": "Warren Hastings",
+        "extradetails": "Warren Hastings served as the first Governor-General of India from 1773 to 1785."
+      },
+      {
+        "question": "Which movement was led by Mahatma Gandhi in 1942?",
+        "choices": ["Non-Cooperation Movement", "Khilafat Movement", "Quit India Movement", "Civil Disobedience Movement"],
+        "type": "MCQs",
+        "correctAnswer": "Quit India Movement",
+        "extradetails": "The Quit India Movement was launched on 8 August 1942, demanding an end to British rule in India."
+      },
+      {
+        "question": "The battle of Plassey (1757) was fought between?",
+        "choices": ["British and Marathas", "British and Mughals", "British and Nawab of Bengal", "British and Portuguese"],
+        "type": "MCQs",
+        "correctAnswer": "British and Nawab of Bengal",
+        "extradetails": "The Battle of Plassey was fought between the British East India Company and Siraj-ud-Daulah, the Nawab of Bengal, leading to British dominance in India."
+      },
+      {
+        "question": "Who is known as the Iron Man of India?",
+        "choices": ["Jawaharlal Nehru", "Sardar Vallabhbhai Patel", "Subhash Chandra Bose", "B.R. Ambedkar"],
+        "type": "MCQs",
+        "correctAnswer": "Sardar Vallabhbhai Patel",
+        "extradetails": "Sardar Patel played a key role in the integration of princely states into India after independence."
+      },
+      {
+        "question": "The Simon Commission (1928) was boycotted because?",
+        "choices": ["It had no Indian members", "It recommended partition", "It opposed reforms", "It supported the British crown"],
+        "type": "MCQs",
+        "correctAnswer": "It had no Indian members",
+        "extradetails": "The Simon Commission was boycotted by Indians as it did not include any Indian representatives."
+      },
+      {
+        "question": "Who wrote the book 'Discovery of India'?",
+        "choices": ["Mahatma Gandhi", "Subhash Chandra Bose", "Jawaharlal Nehru", "Rabindranath Tagore"],
+        "type": "MCQs",
+        "correctAnswer": "Jawaharlal Nehru",
+        "extradetails": "Jawaharlal Nehru wrote 'Discovery of India' while imprisoned in 1944."
+      },
+      {
+        "question": "Who was the last ruler of the Mughal dynasty?",
+        "choices": ["Bahadur Shah II", "Shah Jahan", "Aurangzeb", "Akbar II"],
+        "type": "MCQs",
+        "correctAnswer": "Bahadur Shah II",
+        "extradetails": "Bahadur Shah II was the last Mughal emperor, deposed by the British after the Revolt of 1857."
+      },
+      {
+        "question": "The First War of Indian Independence (1857) was also called?",
+        "choices": ["The Sepoy Mutiny", "The Revolt of 1942", "The Champaran Movement", "The Swadeshi Movement"],
+        "type": "MCQs",
+        "correctAnswer": "The Sepoy Mutiny",
+        "extradetails": "The 1857 revolt began as a mutiny by Indian soldiers in the British army and later spread across India."
+      }
+    ]
+}
+
 ];
