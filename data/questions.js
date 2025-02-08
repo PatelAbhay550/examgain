@@ -726,11 +726,11 @@ export const quiz = [
         "extradetails": "Warren Hastings served as the first Governor-General of India from 1773 to 1785."
       },
       {
-        "question": "Which movement was led by Mahatma Gandhi in 1942?",
-        "choices": ["Non-Cooperation Movement", "Khilafat Movement", "Quit India Movement", "Civil Disobedience Movement"],
+        "question": "The cave paintings at Ajanta primarily depict scenes from:",
+        "choices": ["The life of Mahavira", "The life of Buddha", "Ramayana", "Battle of Mahabharat"],
         "type": "MCQs",
-        "correctAnswer": "Quit India Movement",
-        "extradetails": "The Quit India Movement was launched on 8 August 1942, demanding an end to British rule in India."
+        "correctAnswer": "The life of Buddha",
+        "extradetails": "The cave paintings at Ajanta primarily depict scenes from the life of Buddha and the Jataka tales."
       },
       {
         "question": "The battle of Plassey (1757) was fought between?",
@@ -740,18 +740,18 @@ export const quiz = [
         "extradetails": "The Battle of Plassey was fought between the British East India Company and Siraj-ud-Daulah, the Nawab of Bengal, leading to British dominance in India."
       },
       {
-        "question": "Who is known as the Iron Man of India?",
-        "choices": ["Jawaharlal Nehru", "Sardar Vallabhbhai Patel", "Subhash Chandra Bose", "B.R. Ambedkar"],
+        "question": "Which foreign invader was defeated by Chandragupta Maurya with the help of Chanakya?",
+        "choices": ["Selucus Nicator", "Alexander", "Xerxes", "Darius"],
         "type": "MCQs",
-        "correctAnswer": "Sardar Vallabhbhai Patel",
-        "extradetails": "Sardar Patel played a key role in the integration of princely states into India after independence."
+        "correctAnswer": "Selucus Nicator",
+        "extradetails": "Selucus Nicator was defeated by Chandragupta Maurya"
       },
       {
-        "question": "The Simon Commission (1928) was boycotted because?",
-        "choices": ["It had no Indian members", "It recommended partition", "It opposed reforms", "It supported the British crown"],
+        "question": "Who was the first Indian Governor-General of independent India?",
+        "choices": ["Mountbatten", "C. Rajagopalachari", "Sardar Vallabhbhai Patel", "Lord Wavell"],
         "type": "MCQs",
-        "correctAnswer": "It had no Indian members",
-        "extradetails": "The Simon Commission was boycotted by Indians as it did not include any Indian representatives."
+        "correctAnswer": "C. Rajagopalachari",
+        "extradetails": "C. Rajagopalchari was the first Indian Governor-General of independent India."
       },
       {
         "question": "Who wrote the book 'Discovery of India'?",
@@ -768,11 +768,11 @@ export const quiz = [
         "extradetails": "Bahadur Shah II was the last Mughal emperor, deposed by the British after the Revolt of 1857."
       },
       {
-        "question": "The First War of Indian Independence (1857) was also called?",
-        "choices": ["The Sepoy Mutiny", "The Revolt of 1942", "The Champaran Movement", "The Swadeshi Movement"],
+        "question": "Who among the following is considered the leader of the moderate faction in the Indian National Congress during the early 20th century?",
+        "choices": ["Gopal Krishna Gokhale", "Bal Gangadhar Tilak", "Bipin Chandra pal", "Dadabhai Naroji"],
         "type": "MCQs",
-        "correctAnswer": "The Sepoy Mutiny",
-        "extradetails": "The 1857 revolt began as a mutiny by Indian soldiers in the British army and later spread across India."
+        "correctAnswer": "Gopal Krishna Gokhale",
+        "extradetails": "He was the leader of the moderate faction of the Congress party that advocated reforms by working with existing government institutions."
       }
     ]
 }
