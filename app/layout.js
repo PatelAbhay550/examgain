@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <meta name="msvalidate.01" content="6A9D5FD68DD06639D306A3E519DD967E" />
         <meta name="ahrefs-site-verification" content="13b3363a4ccedd10fe5ff9fe99d7e5ca0d82894db62e56fbd183fc065503f28c" />
         <meta name="google-site-verification" content="CP-bBZfPoKzhXDdIAAeb5AvIDbZoMMJToPGRiBTbb00" />
-        
+        <meta name="google-site-verification" content="7-6j7haeyJWEhikD2wtLIv8Ei8tdX7VOIO3amkGNYdo" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8804622562841633" crossOrigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E6FNQ81D9"></script>
         
