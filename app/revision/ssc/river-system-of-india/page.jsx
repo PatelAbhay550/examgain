@@ -185,10 +185,8 @@ const RiverSystem = () => {
             related to these river systems, such as new projects or
             environmental issues.
           </li>
-          <li>
-            **Use Visual Aids**: Create maps or diagrams to visually connect
-            rivers with their tributaries and the states they flow through.
-          </li>
+          <li> <a href="https://eduware.vercel.app/blog/list-of-18-biosphere-reserves-of-india/">Also read: List of biosphere reserves in India</a>
+                 </li>
         </ul>
       </section>
     </div>
