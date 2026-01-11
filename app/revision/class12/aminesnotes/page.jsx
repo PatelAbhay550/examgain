@@ -90,6 +90,7 @@ const AminesNotes = async () => {
         {/* Render Content */}
         <div className="prose max-w-none">
           <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
+          <a href="https://examrankcheck.vercel.app/dp-constable-answer-key-check">Check delhi police constable marks</a>
         </div>
 
         {/* Tags Section */}
@@ -114,3 +115,4 @@ const AminesNotes = async () => {
 };
 
 export default AminesNotes;
+
