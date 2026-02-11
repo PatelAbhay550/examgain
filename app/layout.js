@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={roboto.className}>
+      <body className={`${roboto.className} bg-gray-50`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -60,9 +60,20 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+
+        {/* Skip to main content link for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-50 bg-blue-600 text-white px-4 py-2 rounded"
+        >
+          Skip to main content
+        </a>
         
         <Header />
-        {children}<Analytics/>
+        <main id="main-content" className="pt-16">
+          {children}
+        </main>
+        <Analytics/>
         <Footer />
       </body>
     </html>

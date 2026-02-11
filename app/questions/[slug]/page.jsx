@@ -799,8 +799,8 @@ export async function generateMetadata({ params }) {
       "https://previews.dropbox.com/p/thumb/ACVP-QJJ3a8LUHbNG3_jUXbrYQREA62gJ2wo1NZzvKdC5heX-8NDWOdqYI02weJLlNTW06WgK5VLfWpqH9VhR512o4z6oRWa8_CX6DvLgR7Q8y41W3fyg4bn_506XmhZO56P1OzcYhrJK4Tb-qqbSgf11eCSu26zeOG7LkKqIamS1mfolTJrSQsNdStTt4wU5DNTKyB7Wj3mY3kQbSKSbLZa1FhR2nRcBP5rdb7yfD2UMBKPUmGCcKzCR95Or-179-liHVAmWADUQDlaR3OKE55992pRLDtPvLH9_51HypmPrd4FNTkSvp5TcC_61KKpEyz_cvxcaknVrp0ZNFrDSJwB/p.png?is_prewarmed=true",
     ],
     openGraph: {
-      title: questionData.question,
-      description: questionData.answer,
+      title: questionData?.question,
+      description: questionData?.answer,
       images: [
         "https://previews.dropbox.com/p/thumb/ACVP-QJJ3a8LUHbNG3_jUXbrYQREA62gJ2wo1NZzvKdC5heX-8NDWOdqYI02weJLlNTW06WgK5VLfWpqH9VhR512o4z6oRWa8_CX6DvLgR7Q8y41W3fyg4bn_506XmhZO56P1OzcYhrJK4Tb-qqbSgf11eCSu26zeOG7LkKqIamS1mfolTJrSQsNdStTt4wU5DNTKyB7Wj3mY3kQbSKSbLZa1FhR2nRcBP5rdb7yfD2UMBKPUmGCcKzCR95Or-179-liHVAmWADUQDlaR3OKE55992pRLDtPvLH9_51HypmPrd4FNTkSvp5TcC_61KKpEyz_cvxcaknVrp0ZNFrDSJwB/p.png?is_prewarmed=true",
       ],
@@ -808,8 +808,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const Page = ({ params }) => {
-  const { slug } = params;
+const Page = async ({ params }) => {
+  const { slug } =await  params;
 
   // Find the matching question data based on the slug
   const questionData = suggestions?.find((item) => item.slug === slug);
@@ -826,12 +826,13 @@ const Page = ({ params }) => {
       "@type": "Question",
       name: questionData.question,
       text: questionData.answer,
-      answerCount: questionData?.answers?.length || 1, // Assuming each question has at least one answer
+      answerCount: questionData?.answer?.length || 1, // Assuming each question has at least one answer
       upvoteCount: questionData.upvoteCount || 0, // Replace with actual upvote count
       dateCreated: questionData.dateCreated || "2024-08-27T00:00Z", // Replace with actual date
       author: {
         "@type": "Person",
         name: questionData.author || "Abhay Patel", // Replace with actual author
+        url: "https://examgain.vercel.app",
       },
       acceptedAnswer: {
         "@type": "Answer",
@@ -842,6 +843,7 @@ const Page = ({ params }) => {
         author: {
           "@type": "Person",
           name: questionData.author || "Abhay Patel", // Replace with actual author
+          url: "https://examgain.vercel.app",
         },
       },
       suggestedAnswer: questionData.suggestedAnswers?.map((answer, index) => ({
@@ -853,6 +855,7 @@ const Page = ({ params }) => {
         author: {
           "@type": "Person",
           name: answer.author || "Abhay Patel", // Replace with actual author
+          url: "https://examgain.vercel.app",
         },
       })),
     },
@@ -863,10 +866,10 @@ const Page = ({ params }) => {
     (item) =>
       item?.slug !== slug &&
       questionData?.tags.some((tag) => item.tags.includes(tag))
-  );
+  ).slice(0, 5);
 
   return (
-    <div className="container mx-auto py-8 pt-28 px-4">
+    <main className="container mx-auto py-12 px-4 max-w-4xl">
       {/* JSON-LD Script */}
       <script
         type="application/ld+json"
@@ -874,45 +877,69 @@ const Page = ({ params }) => {
       />
 
       {/* Question Section */}
-      <h1 className="text-2xl sm:text-3xl font-semibold mb-6 text-blue-700">
-        {questionData.question}
-      </h1>
-      {/* Verified Solution */}
-      <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-3">
-        <p className="text-sm text-gray-500">Verified by Examgain</p>
-        <p className="mt-2 text-base">Answer to this question is verified!</p>
-      </div>
-      <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-8">
-        <span className="font-[800] text-zinc-700">Answer:</span> <br />
-        <div
-          className="text-lg"
-          dangerouslySetInnerHTML={{
-            __html: questionData.answer,
-          }}
-        />
-      </div>
+      <article>
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+          {questionData.question}
+        </h1>
+
+        {/* Verified Badge */}
+        <div className="flex items-center gap-2 mb-8">
+          <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 px-4 py-2 rounded-lg">
+            <span className="text-lg">✓</span>
+            <span className="font-medium">Verified Answer</span>
+          </div>
+        </div>
+
+        {/* Tags */}
+        {questionData.tags && questionData.tags.length > 0 && (
+          <div className="mb-8 flex flex-wrap gap-2">
+            {questionData.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="inline-block bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Answer Section */}
+        <section className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6 mb-8">
+          <h2 className="text-xl font-bold text-blue-900 mb-4">Answer:</h2>
+          <div
+            className="text-gray-800 leading-relaxed prose prose-sm max-w-none"
+            dangerouslySetInnerHTML={{
+              __html: questionData.answer,
+            }}
+          />
+        </section>
+      </article>
 
       {/* Related Questions Section */}
       {relatedQuestions?.length > 0 && (
-        <div className="bg-white shadow-md rounded-lg p-4">
-          <h2 className="text-xl font-semibold mb-4 text-gray-800">
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900">
             Related Questions
           </h2>
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             {relatedQuestions.map((item) => (
-              <li key={item.slug} className="border-b border-gray-200 py-2">
+              <li
+                key={item.slug}
+                className="border border-gray-200 rounded-lg p-4 hover:border-blue-400 hover:shadow-md transition-all duration-300"
+              >
                 <a
                   href={`/questions/${item.slug}`}
-                  className="text-blue-600 hover:text-blue-800"
+                  className="text-blue-600 hover:text-blue-800 font-medium hover:underline"
                 >
                   {item.question}
                 </a>
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       )}
-    </div>
+    </main>
   );
 };
 

@@ -1,14 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-h2,
-h3 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  font-weight: bold;
-  line-height: 1;
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold leading-snug;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold leading-snug;
+  }
+
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
+  h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6 {
+    @apply text-base font-semibold;
+  }
+
+  p {
+    @apply leading-relaxed text-gray-700;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Focus states for accessibility */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+
+  /* Skip link utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only:focus,
+ .sr-only:active {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
 }
+
+/* Component styles */
+@layer components {
+  .container {
+    @apply mx-auto px-4;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-200 text-gray-900 rounded-lg font-semibold hover:bg-gray-300 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-300;
+  }
+}
+

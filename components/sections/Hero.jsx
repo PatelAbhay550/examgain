@@ -1,75 +1,77 @@
 import React from "react";
 import {
   AiOutlineSearch,
-  AiOutlineCamera,
   AiOutlineDatabase,
   AiOutlineBulb,
+  AiOutlineCheckCircle,
 } from "react-icons/ai";
 import Searchbox from "../Searchbox";
 import { suggestions } from "@/data/suggestions";
-import { FaRegNoteSticky } from "react-icons/fa6";
 
 const Hero = () => {
+  const features = [
+    {
+      icon: AiOutlineDatabase,
+      title: "Comprehensive Database",
+      description: "Access solutions for all subjects and exam questions",
+    },
+    {
+      icon: AiOutlineCheckCircle,
+      title: "Verified Answers",
+      description: "All solutions are carefully verified by experts",
+    },
+    {
+      icon: AiOutlineBulb,
+      title: "Learn Smarter",
+      description: "Clear explanations to help you understand deeply",
+    },
+    {
+      icon: AiOutlineSearch,
+      title: "Instant Search",
+      description: "Find answers to your questions instantly",
+    },
+  ];
+
   return (
-    <section className="bg-gradient-to-b from-blue-100 to-white py-12 pt-32 px-4">
-      <div className="container mx-auto text-center">
-        {/* Hero Heading */}
-        <h1 className="text-3xl font-bold mb-8">
-          Search Solutions to All Your Exam Questions and Doubts
-        </h1>
+    <section className="bg-gradient-to-b from-blue-50 to-white py-16 pt-36 px-4" role="region" aria-label="Hero section">
+      <div className="container mx-auto max-w-6xl">
+        {/* Main Heading */}
+        <div className="text-center mb-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            Find Expert Answers to All Your Exam Questions
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Get verified solutions instantly. From SSC to Class 12, we have
+            answers to thousands of questions across all subjects.
+          </p>
+        </div>
 
-        {/* Subtext */}
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          At Examgain, we make finding the right answers effortless. Whether
-          you're preparing for exams, revising chapters, or solving tricky
-          questions, our platform is designed to help you get clear, concise
-          solutions instantly.
-        </p>
+        {/* Search Bar */}
+        <div className="mb-16">
+          <Searchbox suggestions={suggestions} />
+        </div>
 
-        {/* Search bar */}
-        <Searchbox suggestions={suggestions} />
-
-        {/* New Sections for Features */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Comprehensive Database */}
-          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md text-center">
-            <AiOutlineDatabase className="text-blue-500 text-4xl mb-4 mx-auto" />
-            <h2 className="text-xl font-bold mb-2">Comprehensive Database</h2>
-            <p className="text-gray-600">
-              Access solutions for all subjects, chapters, and exam questions.
-            </p>
-          </div>
-
-          {/* Instant Search & Snap-to-Solve */}
-          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md text-center">
-            <FaRegNoteSticky className="text-blue-500 text-4xl mb-4 mx-auto" />
-            <h2 className="text-xl font-bold mb-2">Free Mock Tests</h2>
-            <p className="text-gray-600">
-              Practice with our free mock tests and improve your exam scores.
-            </p>
-          </div>
-
-          {/* Study Smart */}
-          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md text-center">
-            <AiOutlineBulb className="text-blue-500 text-4xl mb-4 mx-auto" />
-            <h2 className="text-xl font-bold mb-2">Study Smart, Not Hard</h2>
-            <p className="text-gray-600">
-              Whether you're stuck on a single question or reviewing entire
-              chapters, Examgain offers fast, accurate answers to help you learn
-              more efficiently.
-            </p>
-          </div>
-
-          {/* CTA - Ready to Master Your Exams */}
-          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md text-center">
-            <AiOutlineSearch className="text-blue-500 text-4xl mb-4 mx-auto" />
-            <h2 className="text-xl font-bold mb-2">
-              Ready to Master Your Exams?
-            </h2>
-            <p className="text-gray-600">
-              Type in your query let Examgain handle the rest.
-            </p>
-          </div>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <article
+                key={index}
+                className="bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md p-6 text-center transition-shadow duration-300"
+              >
+                <div className="flex justify-center mb-4">
+                  <Icon className="text-blue-600 text-4xl" aria-hidden="true" />
+                </div>
+                <h2 className="text-lg font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h2>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
